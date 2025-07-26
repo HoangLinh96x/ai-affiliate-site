@@ -3,400 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Finder - Khám Phá Công Cụ AI Hàng Đầu</title>
+    <title>Top Affiliate Programs - Affitor</title>
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"></script>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* Custom styles */
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a; /* Nền đen tuyền cho cảm giác công nghệ cao */
-            color: #e2e8f0; /* Màu chữ xám nhạt */
-        }
-        .hero-gradient-text {
-            background: linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-bg {
-            background-color: #1e1e20; /* Nền card tối hơn một chút */
-            border: 1px solid #333;
-        }
-        .card-bg:hover {
-            border-color: #a855f7;
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-        .btn-primary {
-            background: linear-gradient(to right, #3b82f6, #8b5cf6);
-        }
-        .btn-primary:hover {
-            background: linear-gradient(to right, #2563eb, #7c3aed);
-        }
-        .tag {
-            background-color: rgba(59, 130, 246, 0.2);
-            color: #60a5fa;
-            border: 1px solid rgba(59, 130, 246, 0.5);
-        }
-        .detail-page-content h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        .detail-page-content ul {
-            list-style-type: none;
-            padding-left: 1.5rem;
-        }
-        .detail-page-content li {
-            position: relative;
-            padding-left: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-        .detail-page-content li::before {
-            content: '⚡';
-            position: absolute;
-            left: -0.25rem;
-            top: 0.1rem;
-            color: #a855f7;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; }
+        .category-scroll { scrollbar-width: none; }
+        .category-scroll::-webkit-scrollbar { display: none; }
+        .transition-all-smooth { transition: all 0.3s ease-in-out; }
+        .no-results-row td { text-align: center; padding: 2rem; color: #6B7280; }
     </style>
 </head>
-<body class="antialiased">
+<body class="text-gray-800">
 
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-opacity-80 backdrop-blur-lg border-b border-gray-800">
-        <div class="container mx-auto px-4">
+    <!-- =========== Header =========== -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
-                <a href="#" id="home-link" class="flex items-center space-x-2 text-xl font-bold">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-                    <span class="hero-gradient-text">AIToolHub</span>
-                </a>
-
-                <!-- Navigation -->
-                <nav class="hidden md:flex items-center space-x-6">
-                    <a href="#features" class="nav-link text-gray-300 hover:text-white transition">Tính năng</a>
-                    <a href="#categories" class="nav-link text-gray-300 hover:text-white transition">Danh mục</a>
-                    <a href="#about" class="nav-link text-gray-300 hover:text-white transition">Về chúng tôi</a>
-                </nav>
-
-                <!-- CTA Button -->
-                <a href="#features" class="nav-link hidden md:block btn-primary text-white font-semibold px-4 py-2 rounded-lg shadow-md transition">Khám phá ngay</a>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-                </button>
+                <div class="flex items-center space-x-8">
+                    <a href="#" class="text-2xl font-bold text-gray-900">Affitor</a>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                        <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">Top Videos</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">Affitor Hunt</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">Pricing</a>
+                    </nav>
+                </div>
+                <div class="hidden lg:flex flex-1 justify-center px-8">
+                    <div class="w-full max-w-md relative">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"><i data-lucide="search" class="w-5 h-5 text-gray-400"></i></div>
+                        <input id="search-input" type="search" placeholder="Search Programs..." class="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://discord.gg/m9wEa7jV2v" target="_blank" class="hidden sm:block px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700">Community</a>
+                    <a href="https://app.affitor.com/login" target="_blank" class="hidden sm:block text-sm font-medium text-gray-600 hover:text-gray-900">Profile</a>
+                    <button id="mobile-menu-button" class="md:hidden text-gray-600"><i data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2">
-             <a href="#features" class="nav-link block text-gray-300 hover:text-white transition px-2 py-1">Tính năng</a>
-             <a href="#categories" class="nav-link block text-gray-300 hover:text-white transition px-2 py-1">Danh mục</a>
-             <a href="#about" class="nav-link block text-gray-300 hover:text-white transition px-2 py-1">Về chúng tôi</a>
-             <a href="#features" class="nav-link block btn-primary text-white font-semibold px-4 py-2 rounded-lg shadow-md transition text-center mt-2">Khám phá ngay</a>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <nav class="flex flex-col space-y-2 mt-4">
+                    <a href="#" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Home</a>
+                    <a href="#" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Top Videos</a>
+                    <a href="#" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Affitor Hunt</a>
+                    <a href="#" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Pricing</a>
+                    <a href="https://app.affitor.com/login" target="_blank" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Profile</a>
+                    <a href="https://discord.gg/m9wEa7jV2v" target="_blank" class="block text-center mt-2 px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700">Community</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Page: Home -->
-        <div id="page-home">
-            <!-- Hero Section -->
-            <section class="py-20 md:py-32">
-                <div class="container mx-auto px-4 text-center">
-                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-                        <span class="hero-gradient-text">Tăng Tốc Sáng Tạo</span> với AI
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-                        Khám phá bộ sưu tập các công cụ AI mạnh mẽ nhất, được tuyển chọn kỹ lưỡng để giúp bạn làm việc thông minh hơn, sáng tạo không giới hạn và đạt hiệu quả vượt trội.
-                    </p>
-                    <div class="flex justify-center space-x-4">
-                        <a href="#features" class="btn-primary text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg transition transform hover:scale-105">
-                            Bắt đầu khám phá
-                        </a>
-                    </div>
-                </div>
-            </section>
+    <!-- =========== Main Content =========== -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">Top Affiliate Programs Curated by Us</h1>
 
-            <!-- Featured AI Tools Section -->
-            <section id="features" class="py-16 bg-black bg-opacity-20">
-                <div class="container mx-auto px-4">
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold text-white">Công Cụ AI Nổi Bật</h2>
-                        <p class="text-gray-400 mt-2">Những lựa chọn hàng đầu được cộng đồng tin dùng.</p>
-                    </div>
-
-                    <!-- Tools Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        
-                        <!-- Tool Card 1: AI Writer -->
-                        <div class="card-bg rounded-xl p-6 flex flex-col">
-                            <div class="flex items-center mb-4">
-                                <img src="https://placehold.co/48x48/7c3aed/ffffff?text=W" alt="AI Writer Icon" class="w-12 h-12 rounded-lg mr-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-white">Jasper AI</h3>
-                                    <p class="text-sm text-gray-400">Trợ lý viết nội dung</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 flex-grow mb-4">
-                                Tạo content marketing, bài blog, email và nhiều hơn nữa chỉ trong vài giây. Tăng tốc độ sáng tạo nội dung của bạn lên 10 lần.
-                            </p>
-                            <div class="mb-4">
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Viết lách</span>
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Marketing</span>
-                            </div>
-                            <button data-page="jasper" class="page-switcher mt-auto btn-primary text-white font-semibold py-2 px-4 rounded-lg text-center transition w-full">Dùng thử ngay</button>
-                        </div>
-
-                        <!-- Other cards remain the same -->
-                        <div class="card-bg rounded-xl p-6 flex flex-col">
-                            <div class="flex items-center mb-4">
-                                 <img src="https://placehold.co/48x48/ec4899/ffffff?text=M" alt="Image Generator Icon" class="w-12 h-12 rounded-lg mr-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-white">Midjourney</h3>
-                                    <p class="text-sm text-gray-400">Tạo hình ảnh từ văn bản</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 flex-grow mb-4">
-                               Biến những ý tưởng và mô tả của bạn thành những tác phẩm nghệ thuật độc đáo và ấn tượng một cách nhanh chóng.
-                            </p>
-                             <div class="mb-4">
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Hình ảnh</span>
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Sáng tạo</span>
-                            </div>
-                            <a href="#" class="mt-auto btn-primary text-white font-semibold py-2 px-4 rounded-lg text-center transition w-full">Khám phá</a>
-                        </div>
-                        <div class="card-bg rounded-xl p-6 flex flex-col">
-                            <div class="flex items-center mb-4">
-                                 <img src="https://placehold.co/48x48/10b981/ffffff?text=C" alt="Code Assistant Icon" class="w-12 h-12 rounded-lg mr-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-white">GitHub Copilot</h3>
-                                    <p class="text-sm text-gray-400">Lập trình viên AI</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 flex-grow mb-4">
-                                Nhận gợi ý code thông minh, hoàn thành hàm và viết code nhanh hơn với trợ lý lập trình được phát triển bởi GitHub và OpenAI.
-                            </p>
-                             <div class="mb-4">
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Lập trình</span>
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Hiệu suất</span>
-                            </div>
-                            <a href="#" class="mt-auto btn-primary text-white font-semibold py-2 px-4 rounded-lg text-center transition w-full">Bắt đầu code</a>
-                        </div>
-                        <div class="card-bg rounded-xl p-6 flex flex-col">
-                            <div class="flex items-center mb-4">
-                                 <img src="https://placehold.co/48x48/f97316/ffffff?text=V" alt="Video Editor Icon" class="w-12 h-12 rounded-lg mr-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-white">Synthesia</h3>
-                                    <p class="text-sm text-gray-400">Tạo video từ văn bản</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 flex-grow mb-4">
-                                Tạo video chuyên nghiệp với MC ảo từ kịch bản văn bản của bạn trong vài phút mà không cần máy quay hay micro.
-                            </p>
-                             <div class="mb-4">
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Video</span>
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Marketing</span>
-                            </div>
-                            <a href="#" class="mt-auto btn-primary text-white font-semibold py-2 px-4 rounded-lg text-center transition w-full">Tạo video</a>
-                        </div>
-                        <div class="card-bg rounded-xl p-6 flex flex-col">
-                            <div class="flex items-center mb-4">
-                                 <img src="https://placehold.co/48x48/0ea5e9/ffffff?text=P" alt="Presentation Maker Icon" class="w-12 h-12 rounded-lg mr-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-white">Tome</h3>
-                                    <p class="text-sm text-gray-400">Tạo bài thuyết trình AI</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 flex-grow mb-4">
-                                Xây dựng những bài thuyết trình và câu chuyện hấp dẫn một cách dễ dàng. AI sẽ giúp bạn thiết kế layout, hình ảnh và nội dung.
-                            </p>
-                             <div class="mb-4">
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Thuyết trình</span>
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Hiệu suất</span>
-                            </div>
-                            <a href="#" class="mt-auto btn-primary text-white font-semibold py-2 px-4 rounded-lg text-center transition w-full">Thử ngay</a>
-                        </div>
-                        <div class="card-bg rounded-xl p-6 flex flex-col">
-                            <div class="flex items-center mb-4">
-                                 <img src="https://placehold.co/48x48/eab308/ffffff?text=S" alt="SEO Tool Icon" class="w-12 h-12 rounded-lg mr-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-white">Surfer SEO</h3>
-                                    <p class="text-sm text-gray-400">Tối ưu hóa nội dung SEO</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 flex-grow mb-4">
-                                Phân tích và so sánh nội dung của bạn với các đối thủ hàng đầu trên Google để đưa ra gợi ý tối ưu hóa chính xác.
-                            </p>
-                             <div class="mb-4">
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">SEO</span>
-                                <span class="tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Marketing</span>
-                            </div>
-                            <a href="#" class="mt-auto btn-primary text-white font-semibold py-2 px-4 rounded-lg text-center transition w-full">Tăng hạng SEO</a>
-                        </div>
-                    </div>
+        <!-- =========== Filters Section =========== -->
+        <div class="bg-white p-6 rounded-lg border border-gray-200 mb-8">
+            <div id="filters-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div>
+                    <label for="filter-commission" class="block text-sm font-medium text-gray-700 mb-1">Commission (%)</label>
+                    <select id="filter-commission" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="0">Any</option><option value="10">10%+</option><option value="20">20%+</option><option value="30">30%+</option><option value="40">40%+</option><option value="50">50%+</option>
+                    </select>
                 </div>
-            </section>
-            
-            <!-- About Section / How it works -->
-            <section id="about" class="py-16">
-                <div class="container mx-auto px-4">
-                    <div class="max-w-4xl mx-auto text-center">
-                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Minh Bạch & Tin Cậy</h2>
-                        <p class="text-gray-400 text-lg">
-                            <span class="font-semibold text-white">AIToolHub</span> hoạt động dựa trên mô hình affiliate marketing. Khi bạn đăng ký sử dụng một công cụ thông qua liên kết của chúng tôi, chúng tôi có thể nhận được một khoản hoa hồng nhỏ. Điều này <span class="font-semibold text-white">hoàn toàn không làm tăng chi phí của bạn</span>, mà còn giúp chúng tôi duy trì và phát triển trang web, tiếp tục mang đến cho bạn những thông tin và đánh giá chất lượng nhất. Cảm ơn bạn đã ủng hộ!
-                        </p>
-                    </div>
+                <div>
+                    <label for="filter-recurring" class="block text-sm font-medium text-gray-700 mb-1">Recurring</label>
+                    <select id="filter-recurring" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="Any">Select recurring type...</option><option value="Yes">Yes</option><option value="No">No</option>
+                    </select>
                 </div>
-            </section>
+                <div>
+                    <label for="filter-traffic" class="block text-sm font-medium text-gray-700 mb-1">Monthly Traffic</label>
+                    <select id="filter-traffic" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="0">Any</option><option value="1000000">1M+</option><option value="5000000">5M+</option><option value="10000000">10M+</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filter-country" class="block text-sm font-medium text-gray-700 mb-1">Country</label>
+                    <select id="filter-country" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="Any">Any</option><option value="United States (US)">United States</option><option value="China (CN)">China</option><option value="Sweden (SE)">Sweden</option><option value="United Kingdom (GB)">United Kingdom</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mt-6 flex items-center justify-between">
+                <button class="flex items-center space-x-2 text-sm font-medium text-blue-600 hover:text-blue-800"><i data-lucide="plus-circle" class="w-4 h-4"></i><span>Show Advanced Filters</span></button>
+                <div class="flex items-center space-x-3">
+                    <button id="apply-filters-btn" class="px-6 py-2 text-sm font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700">Apply Filters</button>
+                    <button id="clear-filters-btn" class="px-6 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">Clear All</button>
+                </div>
+            </div>
         </div>
 
-        <!-- Page: Jasper AI Detail -->
-        <div id="page-jasper" class="hidden">
-            <div class="container mx-auto px-4 py-16">
-                <div class="max-w-4xl mx-auto">
-                    <button data-page="home" class="page-switcher flex items-center text-blue-400 hover:text-blue-300 mb-8">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-                        Quay lại trang chủ
-                    </button>
-
-                    <article class="detail-page-content text-gray-300">
-                        <h1 class="text-4xl md:text-5xl font-extrabold hero-gradient-text mb-4">🚀 Jasper AI – Cỗ máy sáng tạo nội dung thần tốc dành cho kỷ nguyên AI</h1>
-                        <p class="text-lg text-gray-400 mb-8">Bạn mệt mỏi vì ngồi hàng giờ vật lộn với ý tưởng, tiêu đề, nội dung quảng cáo hay email mà vẫn chưa ra chất? Jasper AI chính là “copywriter ảo” đỉnh cao giúp bạn viết nội dung cực nhanh, cực hay, cực chuẩn – chỉ trong vài phút!</p>
-
-                        <h3>🧠 Jasper AI là gì?</h3>
-                        <p>Jasper AI (trước đây là Jarvis) là trợ lý viết nội dung sử dụng trí tuệ nhân tạo, được thiết kế để giúp bạn tạo ra bài viết chất lượng cao, đúng mục tiêu, đúng giọng điệu, phục vụ mọi mục đích: từ blog, quảng cáo Facebook/Google, email marketing, cho đến kịch bản video hay nội dung website.</p>
-
-                        <h3>✨ Những lý do khiến Jasper AI trở thành “vũ khí bí mật” của 100.000+ marketer:</h3>
-                        <ul>
-                            <li><strong>Siêu nhanh</strong> – Chỉ cần nhập vài từ gợi ý, Jasper sẽ tạo ra: Bài viết blog dài 1000+ từ, Mẫu quảng cáo hấp dẫn, CTA mạnh mẽ, Email bán hàng chuyển đổi cao, Script video YouTube thu hút khán giả và còn hơn 50+ định dạng nội dung khác.</li>
-                            <li><strong>Cá nhân hóa linh hoạt</strong> – Bạn có thể tùy chỉnh Jasper theo: Giọng văn (trẻ trung, chuyên nghiệp, hài hước…), Đối tượng mục tiêu, Ngành nghề (bất động sản, giáo dục, công nghệ, làm đẹp…).</li>
-                            <li><strong>Chuẩn SEO, hỗ trợ đa ngôn ngữ</strong> – Jasper tích hợp với SurferSEO giúp tối ưu nội dung chuẩn SEO Google. Hỗ trợ 25+ ngôn ngữ bao gồm cả Tiếng Việt – viết bài cho thị trường quốc tế chưa bao giờ dễ như vậy.</li>
-                            <li><strong>Giao diện dễ dùng, cực kỳ tiện lợi</strong> – Dù bạn không rành kỹ thuật, chỉ vài cú click là bạn có thể tạo ra nội dung như dân chuyên nghiệp.</li>
-                        </ul>
-
-                        <h3>💥 Jasper AI dành cho ai?</h3>
-                        <ul>
-                            <li>Marketer muốn tăng hiệu suất gấp 5 lần</li>
-                            <li>Chủ doanh nghiệp cần tạo nội dung đều đặn mà không cần thuê cả team</li>
-                            <li>Content creator muốn viết nhanh, nhưng vẫn chất</li>
-                            <li>Người mới bắt đầu làm affiliate/blog/Youtube mà chưa biết bắt đầu từ đâu</li>
-                        </ul>
-
-                        <h3>🎯 Kết luận</h3>
-                        <p>Jasper AI không chỉ là công cụ viết lách, mà là một trợ lý sáng tạo thực thụ giúp bạn tiết kiệm thời gian, tăng chất lượng nội dung, và vượt xa đối thủ trong cuộc chơi digital marketing.</p>
-                        <p class="mt-4">Bạn muốn dùng thử Jasper miễn phí và tạo bài viết đầu tiên trong 5 phút?</p>
-                        
-                        <div class="mt-8 text-center">
-                             <a href="#" class="btn-primary text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg transition transform hover:scale-105 inline-block">
-                                👉 Truy cập ngay Jasper.ai để khám phá!
-                            </a>
-                        </div>
-                    </article>
+        <!-- =========== Table Section =========== -->
+        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div class="flex items-center gap-2"><button class="trending-btn active flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-blue-700 bg-blue-100 rounded-md"><i data-lucide="trending-up" class="w-4 h-4"></i><span>Trending</span></button><button class="trending-btn flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-gray-600 hover:bg-gray-100 rounded-md"><i data-lucide="calendar" class="w-4 h-4"></i><span>Weekly</span></button></div>
+                    <button class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-gray-600 border border-gray-300 rounded-md hover:bg-gray-100"><i data-lucide="columns" class="w-4 h-4"></i><span>Customize Columns</span></button>
                 </div>
+                <div class="mt-4 relative flex items-center">
+                    <button id="scroll-left" class="absolute -left-1 z-10 bg-white border rounded-full p-1 shadow-sm opacity-0 transition-opacity-smooth pointer-events-none"><i data-lucide="chevron-left" class="w-5 h-5 text-gray-600"></i></button>
+                    <div id="category-container" class="overflow-x-auto category-scroll">
+                        <div id="category-list" class="flex items-center space-x-2 whitespace-nowrap">
+                            <!-- Danh mục sẽ được chèn vào đây bằng JavaScript -->
+                        </div>
+                    </div>
+                     <button id="scroll-right" class="absolute -right-1 z-10 bg-white border rounded-full p-1 shadow-sm transition-opacity-smooth"><i data-lucide="chevron-right" class="w-5 h-5 text-gray-600"></i></button>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">EPU</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Commission</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider flex items-center gap-1">Monthly Traffic <i data-lucide="arrow-down" class="w-3 h-3"></i></th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Recurring</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pricing</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Launch Year</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Country</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body" class="bg-white divide-y divide-gray-200"></tbody>
+                </table>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-gray-800 mt-16">
-        <div class="container mx-auto px-4 py-8">
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-gray-400">&copy; 2024 AIToolHub. All Rights Reserved.</p>
-                    <p class="text-sm text-gray-500">Nơi khám phá sức mạnh của Trí Tuệ Nhân Tạo.</p>
-                </div>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 2.8 3.2 3 5.2-2.7-1.7-5.5-2.5-8.3-2.5-.8 0-1.6.1-2.3.3-1.2-2.2-3.2-4-5.7-4.5.9-1.2 2.2-2 3.7-2.2 1.1-.2 2.3-.1 3.4.4.9.4 1.7 1.1 2.4 1.9.9-.6 2-1 3.1-1.1.5-.1 1-.1 1.4.1zM12 6.5c-2.2.4-4.2 1.6-5.8 3.2s-2.7 3.6-2.9 5.8c.2.1.4.2.6.3.8.4 1.7.6 2.6.6 2.5 0 4.8-.7 6.8-1.9-1.2-1.8-2.8-3.3-4.7-4.4z"></path></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div class="fixed bottom-8 right-8"><button class="bg-gray-900 text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 hover:bg-gray-800"><i data-lucide="sparkles" class="w-5 h-5"></i><span class="font-semibold text-sm">Affitor AI</span></button></div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // --- Page Switching Logic ---
-            const pageHome = document.getElementById('page-home');
-            const pageJasper = document.getElementById('page-jasper');
-            const allPages = [pageHome, pageJasper];
-            
-            const pageSwitchers = document.querySelectorAll('.page-switcher');
+        document.addEventListener('DOMContentLoaded', function() {
+            const programsData = [
+                { name: 'Notion AI', category: 'AI Productivity', logo: 'https://logo.clearbit.com/notion.so', epu: '$10.0', commission: 50, traffic: 180000000, recurring: 'Yes', pricing: '$8', launchYear: 2023, country: 'United States (US)', link: 'https://www.notion.so/product/ai' },
+                { name: 'Jasper', category: 'AI Writing', logo: 'https://logo.clearbit.com/jasper.ai', epu: '$82.0', commission: 30, traffic: 7500000, recurring: 'Yes', pricing: '$39 - $99', launchYear: 2021, country: 'United States (US)', link: 'https://www.jasper.ai/' },
+                { name: 'Copy.ai', category: 'AI Writing', logo: 'https://logo.clearbit.com/copy.ai', epu: '$25.0', commission: 45, traffic: 15000000, recurring: 'Yes', pricing: '$36 - $122', launchYear: 2020, country: 'United States (US)', link: 'https://www.copy.ai/' },
+                { name: 'Synthesia', category: 'AI Video', logo: 'https://logo.clearbit.com/synthesia.io', epu: '$120.0', commission: 20, traffic: 8000000, recurring: 'Yes', pricing: '$22 - $500', launchYear: 2017, country: 'United States (US)', link: 'https://www.synthesia.io/' },
+                { name: 'Murf.ai', category: 'AI Voice', logo: 'https://logo.clearbit.com/murf.ai', epu: '$29.0', commission: 20, traffic: 3000000, recurring: 'Yes', pricing: '$19 - $99', launchYear: 2020, country: 'United Kingdom (GB)', link: 'https://murf.ai/' },
+                { name: 'Writesonic', category: 'AI Writing', logo: 'https://logo.clearbit.com/writesonic.com', epu: '$20.0', commission: 30, traffic: 9000000, recurring: 'Yes', pricing: '$13 - $500', launchYear: 2021, country: 'United States (US)', link: 'https://writesonic.com/' },
+                { name: 'Pictory', category: 'AI Video', logo: 'https://logo.clearbit.com/pictory.ai', epu: '$39.0', commission: 50, traffic: 2000000, recurring: 'Yes', pricing: '$19 - $99', launchYear: 2020, country: 'United States (US)', link: 'https://pictory.ai/' },
+                { name: 'AdCreative.ai', category: 'AI Ads', logo: 'https://logo.clearbit.com/adcreative.ai', epu: '$100.0', commission: 30, traffic: 1000000, recurring: 'Yes', pricing: '$21 - $141', launchYear: 2021, country: 'France (FR)', link: 'https://www.adcreative.ai/' },
+                { name: 'Durable', category: 'AI Website Builder', logo: 'https://logo.clearbit.com/durable.co', epu: '$12.0', commission: 25, traffic: 2500000, recurring: 'Yes', pricing: '$12 - $20', launchYear: 2022, country: 'Canada (CA)', link: 'https://durable.co/' },
+                { name: 'ClickUp', category: 'AI Productivity', logo: 'https://logo.clearbit.com/clickup.com', epu: '$7.0', commission: 20, traffic: 15000000, recurring: 'Yes', pricing: '$7 - $12', launchYear: 2017, country: 'United States (US)', link: 'https://clickup.com/' },
+                { name: 'Grammarly', category: 'AI Writing', logo: 'https://logo.clearbit.com/grammarly.com', epu: '$20.0', commission: 20, traffic: 60000000, recurring: 'Yes', pricing: '$12 - $30', launchYear: 2009, country: 'United States (US)', link: 'https://www.grammarly.com/' },
+                { name: 'Canva', category: 'AI Design', logo: 'https://logo.clearbit.com/canva.com', epu: '$12.99', commission: 15, traffic: 450000000, recurring: 'Yes', pricing: '$12.99', launchYear: 2013, country: 'Australia (AU)', link: 'https://www.canva.com/' },
+                { name: 'DeepL', category: 'AI Translation', logo: 'https://logo.clearbit.com/deepl.com', epu: '$8.74', commission: 30, traffic: 270000000, recurring: 'Yes', pricing: '$8.74 - $57.49', launchYear: 2017, country: 'Germany (DE)', link: 'https://www.deepl.com/' },
+                { name: 'Figma', category: 'AI Design', logo: 'https://logo.clearbit.com/figma.com', epu: 'N/A', commission: 0, traffic: 80000000, recurring: 'No', pricing: 'Free - $45', launchYear: 2016, country: 'United States (US)', link: 'https://www.figma.com/' },
+                { name: 'Runway', category: 'AI Video', logo: 'https://logo.clearbit.com/runwayml.com', epu: '$35.0', commission: 25, traffic: 6000000, recurring: 'Yes', pricing: '$12 - $76', launchYear: 2018, country: 'United States (US)', link: 'https://runwayml.com/' },
+                { name: 'Tome', category: 'AI Presentation', logo: 'https://logo.clearbit.com/tome.app', epu: '$16.0', commission: 50, traffic: 12000000, recurring: 'Yes', pricing: '$8', launchYear: 2022, country: 'United States (US)', link: 'https://tome.app/' },
+                { name: 'Descript', category: 'AI Audio', logo: 'https://logo.clearbit.com/descript.com', epu: '$24.0', commission: 30, traffic: 4500000, recurring: 'Yes', pricing: '$12 - $24', launchYear: 2017, country: 'United States (US)', link: 'https://www.descript.com/' },
+                { name: 'Midjourney', category: 'AI Image', logo: 'https://logo.clearbit.com/midjourney.com', epu: 'N/A', commission: 0, traffic: 50000000, recurring: 'No', pricing: '$10 - $120', launchYear: 2022, country: 'United States (US)', link: 'https://www.midjourney.com/' },
+                { name: 'ElevenLabs', category: 'AI Audio', logo: 'https://logo.clearbit.com/elevenlabs.io', epu: '$136.18', commission: 22, traffic: 25400000, recurring: 'Yes', pricing: '$4.17 - $99', launchYear: 2022, country: 'United States (US)', link: 'https://elevenlabs.io/' },
+                { name: 'CapCut', category: 'AI Video', logo: 'https://logo.clearbit.com/capcut.com', epu: '$49.5', commission: 30, traffic: 42900000, recurring: 'Yes', pricing: '$9.99', launchYear: 2019, country: 'China (CN)', link: 'https://www.capcut.com/' },
+                { name: 'Gamma', category: 'AI Presentation', logo: 'https://logo.clearbit.com/gamma.app', epu: '$50.4', commission: 30, traffic: 22800000, recurring: 'Yes', pricing: '$8 - $20', launchYear: 2020, country: 'United States (US)', link: 'https://gamma.app/' },
+                { name: 'Lovable', category: 'AI No-Code/Low-Code', logo: 'https://logo.clearbit.com/lovable.ai', epu: '$16.5', commission: 10, traffic: 35400000, recurring: 'Yes', pricing: '$25 - $30', launchYear: 2023, country: 'Sweden (SE)', link: 'https://www.lovable.ai/' },
+                { name: 'Vidyo.ai', category: 'AI Video', logo: 'https://logo.clearbit.com/vidyo.ai', epu: '$29.99', commission: 25, traffic: 1500000, recurring: 'Yes', pricing: '$15 - $30', launchYear: 2021, country: 'United States (US)', link: 'https://vidyo.ai/' },
+                { name: 'Surfer SEO', category: 'AI SEO', logo: 'https://logo.clearbit.com/surferseo.com', epu: '$89.0', commission: 25, traffic: 1200000, recurring: 'Yes', pricing: '$59 - $299', launchYear: 2017, country: 'Poland (PL)', link: 'https://surferseo.com/' },
+                { name: 'Podcastle', category: 'AI Audio', logo: 'https://logo.clearbit.com/podcastle.ai', epu: '$11.99', commission: 25, traffic: 1000000, recurring: 'Yes', pricing: '$11.99 - $23.99', launchYear: 2020, country: 'United States (US)', link: 'https://podcastle.ai/' },
+                { name: 'Taskade', category: 'AI Productivity', logo: 'https://logo.clearbit.com/taskade.com', epu: '$5.0', commission: 30, traffic: 800000, recurring: 'Yes', pricing: '$4 - $8', launchYear: 2017, country: 'United States (US)', link: 'https://www.taskade.com/' },
+                { name: 'Anyword', category: 'AI Writing', logo: 'https://logo.clearbit.com/anyword.com', epu: '$39.0', commission: 20, traffic: 700000, recurring: 'Yes', pricing: '$39 - $99', launchYear: 2021, country: 'United States (US)', link: 'https://anyword.com/' },
+                { name: 'Looka', category: 'AI Design', logo: 'https://logo.clearbit.com/looka.com', epu: '$20.0', commission: 20, traffic: 2000000, recurring: 'No', pricing: '$20 - $65', launchYear: 2016, country: 'Canada (CA)', link: 'https://looka.com/' },
+                { name: 'Rytr', category: 'AI Writing', logo: 'https://logo.clearbit.com/rytr.me', epu: '$9.0', commission: 20, traffic: 3000000, recurring: 'Yes', pricing: '$9 - $29', launchYear: 2021, country: 'United States (US)', link: 'https://rytr.me/' },
+                { name: 'Artlist', category: 'AI Music', logo: 'https://logo.clearbit.com/artlist.io', epu: '$16.60', commission: 25, traffic: 2500000, recurring: 'Yes', pricing: '$9.99 - $16.60', launchYear: 2016, country: 'Israel (IL)', link: 'https://artlist.io/' },
+                { name: 'Soundraw', category: 'AI Music', logo: 'https://logo.clearbit.com/soundraw.io', epu: '$16.99', commission: 20, traffic: 600000, recurring: 'Yes', pricing: '$16.99', launchYear: 2020, country: 'Japan (JP)', link: 'https://soundraw.io/' },
+                { name: 'Lovo.ai', category: 'AI Voice', logo: 'https://logo.clearbit.com/lovo.ai', epu: '$24.0', commission: 20, traffic: 1000000, recurring: 'Yes', pricing: '$24 - $75', launchYear: 2019, country: 'United States (US)', link: 'https://lovo.ai/' },
+                { name: 'Play.ht', category: 'AI Voice', logo: 'https://logo.clearbit.com/play.ht', epu: '$31.20', commission: 30, traffic: 1200000, recurring: 'Yes', pricing: '$31.20 - $79.20', launchYear: 2018, country: 'United States (US)', link: 'https://play.ht/' },
+                { name: 'Fliki', category: 'AI Video', logo: 'https://logo.clearbit.com/fliki.ai', epu: '$21.0', commission: 30, traffic: 1800000, recurring: 'Yes', pricing: '$21 - $66', launchYear: 2021, country: 'United States (US)', link: 'https://fliki.ai/' },
+                { name: 'InVideo', category: 'AI Video', logo: 'https://logo.clearbit.com/invideo.io', epu: '$30.0', commission: 50, traffic: 5000000, recurring: 'Yes', pricing: '$15 - $30', launchYear: 2017, country: 'United States (US)', link: 'https://invideo.io/' },
+                { name: 'Semrush', category: 'AI SEO', logo: 'https://logo.clearbit.com/semrush.com', epu: '$200.0', commission: 40, traffic: 10000000, recurring: 'Yes', pricing: '$119.95 - $449.95', launchYear: 2008, country: 'United States (US)', link: 'https://www.semrush.com/' },
+                { name: 'TubeBuddy', category: 'AI Productivity', logo: 'https://logo.clearbit.com/tubebuddy.com', epu: '$4.50', commission: 30, traffic: 3000000, recurring: 'Yes', pricing: '$4.50 - $24.50', launchYear: 2014, country: 'United States (US)', link: 'https://www.tubebuddy.com/' },
+                { name: 'VidIQ', category: 'AI Productivity', logo: 'https://logo.clearbit.com/vidiq.com', epu: '$7.50', commission: 25, traffic: 4000000, recurring: 'Yes', pricing: '$7.50 - $79', launchYear: 2013, country: 'United States (US)', link: 'https://vidiq.com/' },
+                { name: 'Shopify', category: 'E-commerce', logo: 'https://logo.clearbit.com/shopify.com', epu: '$58.0', commission: 20, traffic: 70000000, recurring: 'Yes', pricing: '$29 - $299', launchYear: 2006, country: 'Canada (CA)', link: 'https://www.shopify.com/' },
+                { name: 'Wix', category: 'AI Website Builder', logo: 'https://logo.clearbit.com/wix.com', epu: '$100.0', commission: 0, traffic: 50000000, recurring: 'No', pricing: '$16 - $45', launchYear: 2006, country: 'Israel (IL)', link: 'https://www.wix.com/' },
+                { name: 'Webflow', category: 'AI Website Builder', logo: 'https://logo.clearbit.com/webflow.com', epu: '$24.0', commission: 50, traffic: 18000000, recurring: 'Yes', pricing: '$14 - $39', launchYear: 2013, country: 'United States (US)', link: 'https://webflow.com/' },
+                { name: 'Kajabi', category: 'E-commerce', logo: 'https://logo.clearbit.com/kajabi.com', epu: '$119.0', commission: 30, traffic: 5000000, recurring: 'Yes', pricing: '$119 - $319', launchYear: 2010, country: 'United States (US)', link: 'https://kajabi.com/' },
+                { name: 'Teachable', category: 'E-commerce', logo: 'https://logo.clearbit.com/teachable.com', epu: '$39.0', commission: 30, traffic: 3000000, recurring: 'Yes', pricing: '$39 - $119', launchYear: 2014, country: 'United States (US)', link: 'https://teachable.com/' },
+                { name: 'Podia', category: 'E-commerce', logo: 'https://logo.clearbit.com/podia.com', epu: '$39.0', commission: 30, traffic: 1500000, recurring: 'Yes', pricing: '$39 - $89', launchYear: 2014, country: 'United States (US)', link: 'https://www.podia.com/' },
+                { name: 'MailerLite', category: 'E-mail Marketing', logo: 'https://logo.clearbit.com/mailerlite.com', epu: '$29.0', commission: 30, traffic: 4000000, recurring: 'Yes', pricing: '$9 - $19', launchYear: 2010, country: 'Lithuania (LT)', link: 'https://www.mailerlite.com/' },
+                { name: 'ConvertKit', category: 'E-mail Marketing', logo: 'https://logo.clearbit.com/convertkit.com', epu: '$29.0', commission: 30, traffic: 3000000, recurring: 'Yes', pricing: '$9 - $25', launchYear: 2013, country: 'United States (US)', link: 'https://convertkit.com/' },
+                { name: 'GetResponse', category: 'E-mail Marketing', logo: 'https://logo.clearbit.com/getresponse.com', epu: '$15.0', commission: 33, traffic: 7000000, recurring: 'Yes', pricing: '$15 - $99', launchYear: 1998, country: 'Poland (PL)', link: 'https://www.getresponse.com/' },
+                { name: 'ActiveCampaign', category: 'E-mail Marketing', logo: 'https://logo.clearbit.com/activecampaign.com', epu: '$29.0', commission: 30, traffic: 6000000, recurring: 'Yes', pricing: '$29 - $229', launchYear: 2003, country: 'United States (US)', link: 'https://www.activecampaign.com/' }
+            ];
 
-            function showPage(pageId) {
-                // Hide all pages
-                allPages.forEach(p => p.classList.add('hidden'));
+            const tableBody = document.getElementById('table-body');
+            const searchInput = document.getElementById('search-input');
+            const applyFiltersBtn = document.getElementById('apply-filters-btn');
+            const clearFiltersBtn = document.getElementById('clear-filters-btn');
+            const categoryListContainer = document.getElementById('category-list');
+            const filterInputs = {
+                commission: document.getElementById('filter-commission'),
+                recurring: document.getElementById('filter-recurring'),
+                traffic: document.getElementById('filter-traffic'),
+                country: document.getElementById('filter-country')
+            };
 
-                // Show the target page
-                const targetPage = document.getElementById(`page-${pageId}`);
-                if (targetPage) {
-                    targetPage.classList.remove('hidden');
-                    window.scrollTo(0, 0); // Scroll to top on page change
-                } else {
-                    // Fallback to home if page not found
-                    pageHome.classList.remove('hidden');
-                }
+            function renderCategories() {
+                const categories = ['All', ...new Set(programsData.map(p => p.category))].sort();
+                categoryListContainer.innerHTML = '';
+                categories.forEach(cat => {
+                    const isActive = cat === 'All';
+                    const link = document.createElement('a');
+                    link.href = '#';
+                    link.dataset.category = cat;
+                    link.className = `category-link px-3 py-1 text-sm font-medium rounded-full ${isActive ? 'active text-white bg-gray-800' : 'text-gray-600 hover:bg-gray-200'}`;
+                    link.textContent = cat;
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const currentActive = categoryListContainer.querySelector('.active');
+                        if (currentActive) {
+                            currentActive.classList.remove('active', 'text-white', 'bg-gray-800');
+                            currentActive.classList.add('text-gray-600', 'hover:bg-gray-200');
+                        }
+                        link.classList.add('active', 'text-white', 'bg-gray-800');
+                        link.classList.remove('text-gray-600', 'hover:bg-gray-200');
+                        filterAndSearch();
+                    });
+                    categoryListContainer.appendChild(link);
+                });
             }
 
-            pageSwitchers.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    const pageId = button.dataset.page;
-                    showPage(pageId);
+            function renderTable(programs) {
+                tableBody.innerHTML = '';
+                if (programs.length === 0) {
+                    tableBody.innerHTML = `<tr class="no-results-row"><td colspan="9">No matching programs found.</td></tr>`;
+                    return;
+                }
+                // Sắp xếp theo traffic giảm dần
+                programs.sort((a, b) => b.traffic - a.traffic);
+                
+                programs.forEach(p => {
+                    const placeholder = `https://placehold.co/40x40/E5E7EB/9CA3AF?text=${p.name.charAt(0)}`;
+                    const logoHtml = `<div class="flex-shrink-0 h-10 w-10"><img class="h-10 w-10 rounded-md object-contain" src="${p.logo}" alt="${p.name} logo" onerror="this.onerror=null;this.src='${placeholder}';"></div>`;
+                    const row = `<tr>
+                            <td class="px-6 py-4 whitespace-nowrap"><div class="flex items-center">${logoHtml}<div class="ml-4"><div class="text-sm font-medium text-gray-900">${p.name}</div><div class="text-sm text-gray-500">${p.category}</div></div></div></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.epu}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.commission}%</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${(p.traffic / 1000000).toFixed(1)}M /mo</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.recurring}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.pricing}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.launchYear}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.country}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium"><a href="${p.link}" target="_blank" class="flex items-center justify-center gap-2 w-24 text-center px-3 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50"><i data-lucide="external-link" class="w-4 h-4"></i><span>Visit</span></a></td>
+                        </tr>`;
+                    tableBody.innerHTML += row;
                 });
-            });
-
-            // --- Navigation Link Logic ---
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    // Ensure home page is visible before scrolling
-                    showPage('home');
-                    // Let the default anchor link behavior happen
-                });
-            });
+                lucide.createIcons();
+            }
             
-            // --- Home link (logo) ---
-            document.getElementById('home-link').addEventListener('click', (e) => {
-                e.preventDefault();
-                showPage('home');
+            function filterAndSearch() {
+                const searchValue = searchInput.value.toLowerCase();
+                const activeCategory = categoryListContainer.querySelector('.active').dataset.category;
+                const filters = {
+                    commission: parseInt(filterInputs.commission.value) || 0,
+                    recurring: filterInputs.recurring.value,
+                    traffic: parseInt(filterInputs.traffic.value) || 0,
+                    country: filterInputs.country.value
+                };
+
+                const filteredPrograms = programsData.filter(p => {
+                    const searchMatch = p.name.toLowerCase().includes(searchValue) || p.category.toLowerCase().includes(searchValue);
+                    const categoryMatch = activeCategory === 'All' || p.category === activeCategory;
+                    const commissionMatch = p.commission >= filters.commission;
+                    const trafficMatch = p.traffic >= filters.traffic;
+                    const countryMatch = filters.country === 'Any' || p.country === filters.country;
+                    const recurringMatch = filters.recurring === 'Any' || p.recurring === filters.recurring;
+
+                    return searchMatch && categoryMatch && commissionMatch && trafficMatch && countryMatch && recurringMatch;
+                });
+                renderTable(filteredPrograms);
+            }
+
+            applyFiltersBtn.addEventListener('click', filterAndSearch);
+            searchInput.addEventListener('keyup', filterAndSearch);
+            clearFiltersBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                Object.values(filterInputs).forEach(input => input.selectedIndex = 0);
+                const allCategoryLink = categoryListContainer.querySelector('[data-category="All"]');
+                if (allCategoryLink) allCategoryLink.click();
+                filterAndSearch();
             });
 
+            // --- KHỞI TẠO BAN ĐẦU ---
+            renderCategories();
+            renderTable(programsData);
+            lucide.createIcons();
 
-            // --- Mobile Menu Toggle ---
+            // --- LOGIC GIAO DIỆN PHỤ ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            const container = document.getElementById('category-container');
+            const scrollLeftBtn = document.getElementById('scroll-left');
+            const scrollRightBtn = document.getElementById('scroll-right');
+            const checkScrollButtons = () => {
+                if (!container) return;
+                const maxScrollLeft = container.scrollWidth - container.clientWidth;
+                scrollLeftBtn.classList.toggle('opacity-0', container.scrollLeft <= 0);
+                scrollLeftBtn.classList.toggle('pointer-events-none', container.scrollLeft <= 0);
+                scrollRightBtn.classList.toggle('opacity-0', container.scrollLeft >= maxScrollLeft -1);
+                scrollRightBtn.classList.toggle('pointer-events-none', container.scrollLeft >= maxScrollLeft -1);
+            };
+            scrollLeftBtn.addEventListener('click', () => container.scrollBy({ left: -200, behavior: 'smooth' }));
+            scrollRightBtn.addEventListener('click', () => container.scrollBy({ left: 200, behavior: 'smooth' }));
+            container.addEventListener('scroll', checkScrollButtons);
+            window.addEventListener('resize', checkScrollButtons);
+            setTimeout(checkScrollButtons, 100);
         });
     </script>
-
 </body>
 </html>
