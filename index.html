@@ -1,318 +1,316 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Affiliate Programs - Affitor</title>
-    
-    <!-- Tailwind CSS CDN -->
+    <title>Kiếm cơm cùng AI - Khám phá và Ứng dụng</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; }
-        .category-scroll { scrollbar-width: none; }
-        .category-scroll::-webkit-scrollbar { display: none; }
-        .transition-all-smooth { transition: all 0.3s ease-in-out; }
-        .no-results-row td { text-align: center; padding: 2rem; color: #6B7280; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .modal {
+            display: none;
+        }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="bg-gray-900 text-gray-200">
 
-    <!-- =========== Header =========== -->
-    <header class="bg-white/80 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-40">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center space-x-8">
-                    <a href="#" class="text-2xl font-bold text-gray-900">Affitor</a>
-                    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                        <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900">Top Videos</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900">Affitor Hunt</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900">Pricing</a>
-                    </nav>
-                </div>
-                <div class="hidden lg:flex flex-1 justify-center px-8">
-                    <div class="w-full max-w-md relative">
-                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"><i data-lucide="search" class="w-5 h-5 text-gray-400"></i></div>
-                        <input id="search-input" type="search" placeholder="Search Programs..." class="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
-                    </div>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <a href="https://discord.gg/m9wEa7jV2v" target="_blank" class="hidden sm:block px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700">Community</a>
-                    <a href="https://app.affitor.com/login" target="_blank" class="hidden sm:block text-sm font-medium text-gray-600 hover:text-gray-900">Profile</a>
-                    <button id="mobile-menu-button" class="md:hidden text-gray-600"><i data-lucide="menu" class="w-6 h-6"></i></button>
-                </div>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <nav class="flex flex-col space-y-2 mt-4">
-                    <a href="#" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Home</a>
-                    <a href="#" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Top Videos</a>
-                    <a href="#" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Affitor Hunt</a>
-                    <a href="#" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Pricing</a>
-                    <a href="https://app.affitor.com/login" target="_blank" class="block py-2 px-3 rounded-md text-gray-600 hover:bg-gray-100">Profile</a>
-                    <a href="https://discord.gg/m9wEa7jV2v" target="_blank" class="block text-center mt-2 px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700">Community</a>
-                </nav>
+    <!-- Header -->
+    <header class="sticky top-0 z-40 w-full border-b border-gray-700 bg-gray-900/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex h-16 items-center justify-between">
+                <a href="#" class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    <span class="font-bold text-xl">Kiếm cơm cùng AI</span>
+                </a>
+                <!-- Nút Gửi công cụ bị ẩn đi ở phiên bản độc lập -->
             </div>
         </div>
     </header>
 
-    <!-- =========== Main Content =========== -->
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 class="text-3xl font-bold text-gray-900 mb-6">Top Affiliate Programs Curated by Us</h1>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 md:py-16">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Kiếm Cơm Cùng AI</h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+                Nền tảng tổng hợp các công cụ AI giúp bạn tăng năng suất và tạo ra thu nhập.
+            </p>
+            <div class="mt-8 max-w-xl mx-auto">
+                <div class="relative">
+                    <input id="search-input" type="text" placeholder="Tìm kiếm công cụ theo tên..." class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+            </div>
+        </section>
 
-        <!-- =========== Filters Section =========== -->
-        <div class="bg-white p-6 rounded-lg border border-gray-200 mb-8">
-            <div id="filters-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div>
-                    <label for="filter-commission" class="block text-sm font-medium text-gray-700 mb-1">Commission (%)</label>
-                    <select id="filter-commission" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                        <option value="0">Any</option><option value="10">10%+</option><option value="20">20%+</option><option value="30">30%+</option><option value="40">40%+</option><option value="50">50%+</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="filter-recurring" class="block text-sm font-medium text-gray-700 mb-1">Recurring</label>
-                    <select id="filter-recurring" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                        <option value="Any">Select recurring type...</option><option value="Yes">Yes</option><option value="No">No</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="filter-traffic" class="block text-sm font-medium text-gray-700 mb-1">Monthly Traffic</label>
-                    <select id="filter-traffic" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                        <option value="0">Any</option><option value="1000000">1M+</option><option value="5000000">5M+</option><option value="10000000">10M+</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="filter-country" class="block text-sm font-medium text-gray-700 mb-1">Country</label>
-                    <select id="filter-country" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                        <option value="Any">Any</option><option value="United States (US)">United States</option><option value="China (CN)">China</option><option value="Sweden (SE)">Sweden</option><option value="United Kingdom (GB)">United Kingdom</option>
-                    </select>
-                </div>
-            </div>
-            <div class="mt-6 flex items-center justify-between">
-                <button class="flex items-center space-x-2 text-sm font-medium text-blue-600 hover:text-blue-800"><i data-lucide="plus-circle" class="w-4 h-4"></i><span>Show Advanced Filters</span></button>
-                <div class="flex items-center space-x-3">
-                    <button id="apply-filters-btn" class="px-6 py-2 text-sm font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700">Apply Filters</button>
-                    <button id="clear-filters-btn" class="px-6 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">Clear All</button>
-                </div>
-            </div>
-        </div>
+        <!-- Filters -->
+        <section class="mb-8 flex justify-center flex-wrap gap-2" id="category-filters">
+            <button data-category="all" class="filter-btn bg-blue-600 text-white py-2 px-4 rounded-full text-sm font-semibold">Tất cả</button>
+            <button data-category="Viết lách" class="filter-btn bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-full text-sm font-semibold transition-colors">Viết lách</button>
+            <button data-category="Hình ảnh" class="filter-btn bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-full text-sm font-semibold transition-colors">Hình ảnh</button>
+            <button data-category="Giọng nói" class="filter-btn bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-full text-sm font-semibold transition-colors">Giọng nói</button>
+            <button data-category="Tạo Video" class="filter-btn bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-full text-sm font-semibold transition-colors">Tạo Video</button>
+            <button data-category="Edit Video" class="filter-btn bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-full text-sm font-semibold transition-colors">Edit Video</button>
+            <button data-category="Thuyết trình" class="filter-btn bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-full text-sm font-semibold transition-colors">Thuyết trình</button>
+            <button data-category="Marketing" class="filter-btn bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-full text-sm font-semibold transition-colors">Marketing</button>
+            <button data-category="Năng suất" class="filter-btn bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-full text-sm font-semibold transition-colors">Năng suất</button>
+        </section>
 
-        <!-- =========== Table Section =========== -->
-        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-            <div class="p-4 border-b border-gray-200">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div class="flex items-center gap-2"><button class="trending-btn active flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-blue-700 bg-blue-100 rounded-md"><i data-lucide="trending-up" class="w-4 h-4"></i><span>Trending</span></button><button class="trending-btn flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-gray-600 hover:bg-gray-100 rounded-md"><i data-lucide="calendar" class="w-4 h-4"></i><span>Weekly</span></button></div>
-                    <button class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-gray-600 border border-gray-300 rounded-md hover:bg-gray-100"><i data-lucide="columns" class="w-4 h-4"></i><span>Customize Columns</span></button>
-                </div>
-                <div class="mt-4 relative flex items-center">
-                    <button id="scroll-left" class="absolute -left-1 z-10 bg-white border rounded-full p-1 shadow-sm opacity-0 transition-opacity-smooth pointer-events-none"><i data-lucide="chevron-left" class="w-5 h-5 text-gray-600"></i></button>
-                    <div id="category-container" class="overflow-x-auto category-scroll">
-                        <div id="category-list" class="flex items-center space-x-2 whitespace-nowrap">
-                            <!-- Danh mục sẽ được chèn vào đây bằng JavaScript -->
-                        </div>
-                    </div>
-                     <button id="scroll-right" class="absolute -right-1 z-10 bg-white border rounded-full p-1 shadow-sm transition-opacity-smooth"><i data-lucide="chevron-right" class="w-5 h-5 text-gray-600"></i></button>
-                </div>
-            </div>
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">EPU</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Commission</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider flex items-center gap-1">Monthly Traffic <i data-lucide="arrow-down" class="w-3 h-3"></i></th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Recurring</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pricing</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Launch Year</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Country</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table-body" class="bg-white divide-y divide-gray-200"></tbody>
-                </table>
-            </div>
-        </div>
+        <!-- Tool Grid -->
+        <section id="tool-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Tool cards will be injected here by JavaScript -->
+        </section>
     </main>
 
-    <div class="fixed bottom-8 right-8"><button class="bg-gray-900 text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 hover:bg-gray-800"><i data-lucide="sparkles" class="w-5 h-5"></i><span class="font-semibold text-sm">Affitor AI</span></button></div>
-
+    <!-- Tool Detail Modal -->
+    <div id="tool-detail-modal" class="modal fixed inset-0 z-50 bg-black bg-opacity-70 items-center justify-center">
+        <div class="bg-gray-800 rounded-lg p-8 w-full max-w-2xl mx-4 relative">
+            <button id="close-detail-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+            <div class="flex flex-col sm:flex-row gap-8">
+                <div class="flex-shrink-0 text-center">
+                    <img id="detail-logo" src="" alt="Logo" class="w-24 h-24 rounded-lg mx-auto bg-gray-700 object-contain">
+                    <h2 id="detail-name" class="text-2xl font-bold mt-4">Tool Name</h2>
+                    <div id="detail-rating" class="flex items-center justify-center mt-2">
+                        <!-- Stars will be injected here -->
+                    </div>
+                    <span id="detail-category" class="bg-gray-700 text-blue-400 text-sm font-semibold px-3 py-1 rounded-full mt-3 inline-block">Category</span>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="text-xl font-semibold mb-3">Tính năng chính:</h3>
+                    <div id="detail-description" class="text-gray-300 space-y-2"></div>
+                    <div class="mt-6">
+                        <a id="detail-visit-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full text-center block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors text-lg">
+                            Mời bạn dùng thử miễn phí
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const programsData = [
-                { name: 'Notion AI', category: 'AI Productivity', logo: 'https://logo.clearbit.com/notion.so', epu: '$10.0', commission: 50, traffic: 180000000, recurring: 'Yes', pricing: '$8', launchYear: 2023, country: 'United States (US)', link: 'https://www.notion.so/product/ai' },
-                { name: 'Jasper', category: 'AI Writing', logo: 'https://logo.clearbit.com/jasper.ai', epu: '$82.0', commission: 30, traffic: 7500000, recurring: 'Yes', pricing: '$39 - $99', launchYear: 2021, country: 'United States (US)', link: 'https://www.jasper.ai/' },
-                { name: 'Copy.ai', category: 'AI Writing', logo: 'https://logo.clearbit.com/copy.ai', epu: '$25.0', commission: 45, traffic: 15000000, recurring: 'Yes', pricing: '$36 - $122', launchYear: 2020, country: 'United States (US)', link: 'https://www.copy.ai/' },
-                { name: 'Synthesia', category: 'AI Video', logo: 'https://logo.clearbit.com/synthesia.io', epu: '$120.0', commission: 20, traffic: 8000000, recurring: 'Yes', pricing: '$22 - $500', launchYear: 2017, country: 'United States (US)', link: 'https://www.synthesia.io/' },
-                { name: 'Murf.ai', category: 'AI Voice', logo: 'https://logo.clearbit.com/murf.ai', epu: '$29.0', commission: 20, traffic: 3000000, recurring: 'Yes', pricing: '$19 - $99', launchYear: 2020, country: 'United Kingdom (GB)', link: 'https://murf.ai/' },
-                { name: 'Writesonic', category: 'AI Writing', logo: 'https://logo.clearbit.com/writesonic.com', epu: '$20.0', commission: 30, traffic: 9000000, recurring: 'Yes', pricing: '$13 - $500', launchYear: 2021, country: 'United States (US)', link: 'https://writesonic.com/' },
-                { name: 'Pictory', category: 'AI Video', logo: 'https://logo.clearbit.com/pictory.ai', epu: '$39.0', commission: 50, traffic: 2000000, recurring: 'Yes', pricing: '$19 - $99', launchYear: 2020, country: 'United States (US)', link: 'https://pictory.ai/' },
-                { name: 'AdCreative.ai', category: 'AI Ads', logo: 'https://logo.clearbit.com/adcreative.ai', epu: '$100.0', commission: 30, traffic: 1000000, recurring: 'Yes', pricing: '$21 - $141', launchYear: 2021, country: 'France (FR)', link: 'https://www.adcreative.ai/' },
-                { name: 'Durable', category: 'AI Website Builder', logo: 'https://logo.clearbit.com/durable.co', epu: '$12.0', commission: 25, traffic: 2500000, recurring: 'Yes', pricing: '$12 - $20', launchYear: 2022, country: 'Canada (CA)', link: 'https://durable.co/' },
-                { name: 'ClickUp', category: 'AI Productivity', logo: 'https://logo.clearbit.com/clickup.com', epu: '$7.0', commission: 20, traffic: 15000000, recurring: 'Yes', pricing: '$7 - $12', launchYear: 2017, country: 'United States (US)', link: 'https://clickup.com/' },
-                { name: 'Grammarly', category: 'AI Writing', logo: 'https://logo.clearbit.com/grammarly.com', epu: '$20.0', commission: 20, traffic: 60000000, recurring: 'Yes', pricing: '$12 - $30', launchYear: 2009, country: 'United States (US)', link: 'https://www.grammarly.com/' },
-                { name: 'Canva', category: 'AI Design', logo: 'https://logo.clearbit.com/canva.com', epu: '$12.99', commission: 15, traffic: 450000000, recurring: 'Yes', pricing: '$12.99', launchYear: 2013, country: 'Australia (AU)', link: 'https://www.canva.com/' },
-                { name: 'DeepL', category: 'AI Translation', logo: 'https://logo.clearbit.com/deepl.com', epu: '$8.74', commission: 30, traffic: 270000000, recurring: 'Yes', pricing: '$8.74 - $57.49', launchYear: 2017, country: 'Germany (DE)', link: 'https://www.deepl.com/' },
-                { name: 'Figma', category: 'AI Design', logo: 'https://logo.clearbit.com/figma.com', epu: 'N/A', commission: 0, traffic: 80000000, recurring: 'No', pricing: 'Free - $45', launchYear: 2016, country: 'United States (US)', link: 'https://www.figma.com/' },
-                { name: 'Runway', category: 'AI Video', logo: 'https://logo.clearbit.com/runwayml.com', epu: '$35.0', commission: 25, traffic: 6000000, recurring: 'Yes', pricing: '$12 - $76', launchYear: 2018, country: 'United States (US)', link: 'https://runwayml.com/' },
-                { name: 'Tome', category: 'AI Presentation', logo: 'https://logo.clearbit.com/tome.app', epu: '$16.0', commission: 50, traffic: 12000000, recurring: 'Yes', pricing: '$8', launchYear: 2022, country: 'United States (US)', link: 'https://tome.app/' },
-                { name: 'Descript', category: 'AI Audio', logo: 'https://logo.clearbit.com/descript.com', epu: '$24.0', commission: 30, traffic: 4500000, recurring: 'Yes', pricing: '$12 - $24', launchYear: 2017, country: 'United States (US)', link: 'https://www.descript.com/' },
-                { name: 'Midjourney', category: 'AI Image', logo: 'https://logo.clearbit.com/midjourney.com', epu: 'N/A', commission: 0, traffic: 50000000, recurring: 'No', pricing: '$10 - $120', launchYear: 2022, country: 'United States (US)', link: 'https://www.midjourney.com/' },
-                { name: 'ElevenLabs', category: 'AI Audio', logo: 'https://logo.clearbit.com/elevenlabs.io', epu: '$136.18', commission: 22, traffic: 25400000, recurring: 'Yes', pricing: '$4.17 - $99', launchYear: 2022, country: 'United States (US)', link: 'https://elevenlabs.io/' },
-                { name: 'CapCut', category: 'AI Video', logo: 'https://logo.clearbit.com/capcut.com', epu: '$49.5', commission: 30, traffic: 42900000, recurring: 'Yes', pricing: '$9.99', launchYear: 2019, country: 'China (CN)', link: 'https://www.capcut.com/' },
-                { name: 'Gamma', category: 'AI Presentation', logo: 'https://logo.clearbit.com/gamma.app', epu: '$50.4', commission: 30, traffic: 22800000, recurring: 'Yes', pricing: '$8 - $20', launchYear: 2020, country: 'United States (US)', link: 'https://gamma.app/' },
-                { name: 'Lovable', category: 'AI No-Code/Low-Code', logo: 'https://logo.clearbit.com/lovable.ai', epu: '$16.5', commission: 10, traffic: 35400000, recurring: 'Yes', pricing: '$25 - $30', launchYear: 2023, country: 'Sweden (SE)', link: 'https://www.lovable.ai/' },
-                { name: 'Vidyo.ai', category: 'AI Video', logo: 'https://logo.clearbit.com/vidyo.ai', epu: '$29.99', commission: 25, traffic: 1500000, recurring: 'Yes', pricing: '$15 - $30', launchYear: 2021, country: 'United States (US)', link: 'https://vidyo.ai/' },
-                { name: 'Surfer SEO', category: 'AI SEO', logo: 'https://logo.clearbit.com/surferseo.com', epu: '$89.0', commission: 25, traffic: 1200000, recurring: 'Yes', pricing: '$59 - $299', launchYear: 2017, country: 'Poland (PL)', link: 'https://surferseo.com/' },
-                { name: 'Podcastle', category: 'AI Audio', logo: 'https://logo.clearbit.com/podcastle.ai', epu: '$11.99', commission: 25, traffic: 1000000, recurring: 'Yes', pricing: '$11.99 - $23.99', launchYear: 2020, country: 'United States (US)', link: 'https://podcastle.ai/' },
-                { name: 'Taskade', category: 'AI Productivity', logo: 'https://logo.clearbit.com/taskade.com', epu: '$5.0', commission: 30, traffic: 800000, recurring: 'Yes', pricing: '$4 - $8', launchYear: 2017, country: 'United States (US)', link: 'https://www.taskade.com/' },
-                { name: 'Anyword', category: 'AI Writing', logo: 'https://logo.clearbit.com/anyword.com', epu: '$39.0', commission: 20, traffic: 700000, recurring: 'Yes', pricing: '$39 - $99', launchYear: 2021, country: 'United States (US)', link: 'https://anyword.com/' },
-                { name: 'Looka', category: 'AI Design', logo: 'https://logo.clearbit.com/looka.com', epu: '$20.0', commission: 20, traffic: 2000000, recurring: 'No', pricing: '$20 - $65', launchYear: 2016, country: 'Canada (CA)', link: 'https://looka.com/' },
-                { name: 'Rytr', category: 'AI Writing', logo: 'https://logo.clearbit.com/rytr.me', epu: '$9.0', commission: 20, traffic: 3000000, recurring: 'Yes', pricing: '$9 - $29', launchYear: 2021, country: 'United States (US)', link: 'https://rytr.me/' },
-                { name: 'Artlist', category: 'AI Music', logo: 'https://logo.clearbit.com/artlist.io', epu: '$16.60', commission: 25, traffic: 2500000, recurring: 'Yes', pricing: '$9.99 - $16.60', launchYear: 2016, country: 'Israel (IL)', link: 'https://artlist.io/' },
-                { name: 'Soundraw', category: 'AI Music', logo: 'https://logo.clearbit.com/soundraw.io', epu: '$16.99', commission: 20, traffic: 600000, recurring: 'Yes', pricing: '$16.99', launchYear: 2020, country: 'Japan (JP)', link: 'https://soundraw.io/' },
-                { name: 'Lovo.ai', category: 'AI Voice', logo: 'https://logo.clearbit.com/lovo.ai', epu: '$24.0', commission: 20, traffic: 1000000, recurring: 'Yes', pricing: '$24 - $75', launchYear: 2019, country: 'United States (US)', link: 'https://lovo.ai/' },
-                { name: 'Play.ht', category: 'AI Voice', logo: 'https://logo.clearbit.com/play.ht', epu: '$31.20', commission: 30, traffic: 1200000, recurring: 'Yes', pricing: '$31.20 - $79.20', launchYear: 2018, country: 'United States (US)', link: 'https://play.ht/' },
-                { name: 'Fliki', category: 'AI Video', logo: 'https://logo.clearbit.com/fliki.ai', epu: '$21.0', commission: 30, traffic: 1800000, recurring: 'Yes', pricing: '$21 - $66', launchYear: 2021, country: 'United States (US)', link: 'https://fliki.ai/' },
-                { name: 'InVideo', category: 'AI Video', logo: 'https://logo.clearbit.com/invideo.io', epu: '$30.0', commission: 50, traffic: 5000000, recurring: 'Yes', pricing: '$15 - $30', launchYear: 2017, country: 'United States (US)', link: 'https://invideo.io/' },
-                { name: 'Semrush', category: 'AI SEO', logo: 'https://logo.clearbit.com/semrush.com', epu: '$200.0', commission: 40, traffic: 10000000, recurring: 'Yes', pricing: '$119.95 - $449.95', launchYear: 2008, country: 'United States (US)', link: 'https://www.semrush.com/' },
-                { name: 'TubeBuddy', category: 'AI Productivity', logo: 'https://logo.clearbit.com/tubebuddy.com', epu: '$4.50', commission: 30, traffic: 3000000, recurring: 'Yes', pricing: '$4.50 - $24.50', launchYear: 2014, country: 'United States (US)', link: 'https://www.tubebuddy.com/' },
-                { name: 'VidIQ', category: 'AI Productivity', logo: 'https://logo.clearbit.com/vidiq.com', epu: '$7.50', commission: 25, traffic: 4000000, recurring: 'Yes', pricing: '$7.50 - $79', launchYear: 2013, country: 'United States (US)', link: 'https://vidiq.com/' },
-                { name: 'Shopify', category: 'E-commerce', logo: 'https://logo.clearbit.com/shopify.com', epu: '$58.0', commission: 20, traffic: 70000000, recurring: 'Yes', pricing: '$29 - $299', launchYear: 2006, country: 'Canada (CA)', link: 'https://www.shopify.com/' },
-                { name: 'Wix', category: 'AI Website Builder', logo: 'https://logo.clearbit.com/wix.com', epu: '$100.0', commission: 0, traffic: 50000000, recurring: 'No', pricing: '$16 - $45', launchYear: 2006, country: 'Israel (IL)', link: 'https://www.wix.com/' },
-                { name: 'Webflow', category: 'AI Website Builder', logo: 'https://logo.clearbit.com/webflow.com', epu: '$24.0', commission: 50, traffic: 18000000, recurring: 'Yes', pricing: '$14 - $39', launchYear: 2013, country: 'United States (US)', link: 'https://webflow.com/' },
-                { name: 'Kajabi', category: 'E-commerce', logo: 'https://logo.clearbit.com/kajabi.com', epu: '$119.0', commission: 30, traffic: 5000000, recurring: 'Yes', pricing: '$119 - $319', launchYear: 2010, country: 'United States (US)', link: 'https://kajabi.com/' },
-                { name: 'Teachable', category: 'E-commerce', logo: 'https://logo.clearbit.com/teachable.com', epu: '$39.0', commission: 30, traffic: 3000000, recurring: 'Yes', pricing: '$39 - $119', launchYear: 2014, country: 'United States (US)', link: 'https://teachable.com/' },
-                { name: 'Podia', category: 'E-commerce', logo: 'https://logo.clearbit.com/podia.com', epu: '$39.0', commission: 30, traffic: 1500000, recurring: 'Yes', pricing: '$39 - $89', launchYear: 2014, country: 'United States (US)', link: 'https://www.podia.com/' },
-                { name: 'MailerLite', category: 'E-mail Marketing', logo: 'https://logo.clearbit.com/mailerlite.com', epu: '$29.0', commission: 30, traffic: 4000000, recurring: 'Yes', pricing: '$9 - $19', launchYear: 2010, country: 'Lithuania (LT)', link: 'https://www.mailerlite.com/' },
-                { name: 'ConvertKit', category: 'E-mail Marketing', logo: 'https://logo.clearbit.com/convertkit.com', epu: '$29.0', commission: 30, traffic: 3000000, recurring: 'Yes', pricing: '$9 - $25', launchYear: 2013, country: 'United States (US)', link: 'https://convertkit.com/' },
-                { name: 'GetResponse', category: 'E-mail Marketing', logo: 'https://logo.clearbit.com/getresponse.com', epu: '$15.0', commission: 33, traffic: 7000000, recurring: 'Yes', pricing: '$15 - $99', launchYear: 1998, country: 'Poland (PL)', link: 'https://www.getresponse.com/' },
-                { name: 'ActiveCampaign', category: 'E-mail Marketing', logo: 'https://logo.clearbit.com/activecampaign.com', epu: '$29.0', commission: 30, traffic: 6000000, recurring: 'Yes', pricing: '$29 - $229', launchYear: 2003, country: 'United States (US)', link: 'https://www.activecampaign.com/' }
-            ];
+        // --- STATE & DATA ---
+        let currentFilter = 'all';
+        const allTools = [
+            // Viết lách
+            { id: "1", name: "ChatGPT", url: "https://chat.openai.com", description: "Mô hình ngôn ngữ cho hội thoại.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/openai.com", rating: 4.9, detailedDescription: "• <b>Trợ lý vạn năng:</b> Trả lời mọi câu hỏi, giải thích các chủ đề phức tạp.<br>• <b>Sáng tạo nội dung:</b> Viết email, bài đăng blog, kịch bản, lời bài hát.<br>• <b>Hỗ trợ lập trình:</b> Viết code, tìm lỗi và giải thích các đoạn mã." },
+            { id: "2", name: "Jasper", url: "https://www.jasper.ai/", description: "Trợ lý viết nội dung AI cho doanh nghiệp.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/jasper.ai", rating: 4.8, detailedDescription: "• <b>Dành cho Marketer:</b> Tạo nội dung quảng cáo, email, và landing page chuyển đổi cao.<br>• <b>Viết blog nhanh chóng:</b> Soạn thảo các bài viết dài, chuẩn SEO trong thời gian ngắn.<br>• <b>Hơn 50 mẫu có sẵn:</b> Cung cấp các khung sườn cho mọi loại nội dung bạn cần." },
+            { id: "3", name: "Copy.ai", url: "https://www.copy.ai", description: "Tạo nội dung marketing tự động.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/copy.ai", rating: 4.7, detailedDescription: "• <b>Vượt qua bí ý tưởng:</b> Tạo ra nhiều phiên bản nội dung quảng cáo, mô tả sản phẩm.<br>• <b>Tăng tốc quy trình:</b> Giúp đội nhóm marketing sản xuất nội dung nhanh hơn.<br>• <b>Giọng văn đa dạng:</b> Dễ dàng điều chỉnh văn phong cho phù hợp với thương hiệu." },
+            { id: "4", name: "Writesonic", url: "https://writesonic.com/", description: "Tạo nội dung SEO và bài viết blog.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/writesonic.com", rating: 4.7, detailedDescription: "• <b>Giải pháp toàn diện:</b> Từ bài viết SEO, quảng cáo Facebook đến trang đích.<br>• <b>Tích hợp Surfer SEO:</b> Giúp tối ưu hóa nội dung để có thứ hạng cao trên Google.<br>• <b>Chatsonic:</b> Một chatbot tương tự ChatGPT nhưng được cập nhật dữ liệu mới nhất." },
+            { id: "5", name: "Rytr", url: "https://rytr.me/", description: "Trợ lý viết AI giá cả phải chăng.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/rytr.me", rating: 4.6, detailedDescription: "• <b>Giá cả hợp lý:</b> Lựa chọn tuyệt vời cho cá nhân, freelancer và doanh nghiệp nhỏ.<br>• <b>Hơn 40 mẫu nội dung:</b> Bao gồm email, ý tưởng blog, mô tả video YouTube.<br>• <b>Hỗ trợ đa ngôn ngữ:</b> Viết nội dung bằng hơn 30 ngôn ngữ khác nhau." },
+            { id: "6", name: "Grammarly", url: "https://www.grammarly.com/", description: "Kiểm tra ngữ pháp và văn phong.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/grammarly.com", rating: 4.8, detailedDescription: "• <b>Sửa lỗi chuyên sâu:</b> Kiểm tra chính tả, ngữ pháp, dấu câu.<br>• <b>Nâng cao văn phong:</b> Đề xuất cách diễn đạt rõ ràng, mạch lạc và tự tin hơn.<br>• <b>Phát hiện đạo văn:</b> Đảm bảo tính nguyên gốc cho bài viết của bạn." },
+            { id: "7", name: "QuillBot", url: "https://quillbot.com/", description: "Công cụ diễn giải và tóm tắt văn bản.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/quillbot.com", rating: 4.7, detailedDescription: "• <b>Diễn giải thông minh:</b> Viết lại câu và đoạn văn để tránh trùng lặp.<br>• <b>Tóm tắt văn bản:</b> Rút gọn các bài báo, tài liệu dài thành những ý chính.<br>• <b>Trích dẫn tiện lợi:</b> Hỗ trợ tạo danh mục tài liệu tham khảo theo nhiều định dạng." },
+            { id: "58", name: "Wordtune", url: "https://www.wordtune.com/", description: "Viết lại và cải thiện câu văn của bạn.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/wordtune.com", rating: 4.6, detailedDescription: "• <b>Diễn đạt lại ý tưởng:</b> Cung cấp nhiều cách khác nhau để diễn đạt cùng một ý.<br>• <b>Thay đổi giọng văn:</b> Dễ dàng chuyển đổi giữa văn phong trang trọng và thân mật.<br>• <b>Rút gọn và mở rộng:</b> Làm cho câu văn của bạn súc tích hoặc chi tiết hơn." },
+            { id: "61", name: "Sudowrite", url: "https://www.sudowrite.com/", description: "Trợ lý viết tiểu thuyết và kịch bản.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/sudowrite.com", rating: 4.5, detailedDescription: "• <b>Dành cho nhà văn:</b> Giúp bạn vượt qua khó khăn khi viết truyện, xây dựng nhân vật.<br>• <b>Brainstorm ý tưởng:</b> Gợi ý các tình tiết, mô tả và lời thoại.<br>• <b>Mở rộng câu chuyện:</b> Viết tiếp câu chuyện của bạn theo phong cách đã định." },
+            { id: "72", name: "Poe", url: "https://poe.com/", description: "Trò chuyện với nhiều chatbot AI khác nhau.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/poe.com", rating: 4.8, detailedDescription: "• <b>Nền tảng đa chatbot:</b> Truy cập ChatGPT, Claude, và các mô hình AI khác ở cùng một nơi.<br>• <b>Tạo bot tùy chỉnh:</b> Xây dựng chatbot của riêng bạn với các chỉ dẫn cụ thể.<br>• <b>Khám phá và chia sẻ:</b> Tìm và sử dụng các bot do cộng đồng tạo ra." },
+            { id: "91", name: "DeepL", url: "https://www.deepl.com/", description: "Dịch thuật AI với độ chính xác cao.", category: "Viết lách", logoUrl: "https://logo.clearbit.com/deepl.com", rating: 4.9, detailedDescription: "• <b>Dịch thuật siêu chính xác:</b> Nổi tiếng với khả năng dịch thuật tự nhiên và chính xác hơn các công cụ khác.<br>• <b>Giữ nguyên văn phong:</b> Hiểu được sắc thái và ngữ cảnh để đưa ra bản dịch phù hợp.<br>• <b>Tích hợp đa nền tảng:</b> Sử dụng trực tiếp trên web, ứng dụng máy tính và API." },
+            
+            // Hình ảnh
+            { id: "11", name: "Midjourney", url: "https://www.midjourney.com", description: "Tạo hình ảnh nghệ thuật từ văn bản.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/midjourney.com", rating: 4.9, detailedDescription: "• <b>Chất lượng nghệ thuật cao:</b> Nổi tiếng với khả năng tạo ra những hình ảnh có phong cách độc đáo, ấn tượng.<br>• <b>Hoạt động trên Discord:</b> Tương tác với bot để tạo và tinh chỉnh hình ảnh.<br>• <b>Cộng đồng sáng tạo:</b> Học hỏi và lấy cảm hứng từ hàng triệu người dùng khác." },
+            { id: "12", name: "DALL-E 2", url: "https://openai.com/dall-e-2/", description: "Tạo hình ảnh và nghệ thuật thực tế từ mô tả.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/openai.com", rating: 4.7, detailedDescription: "• <b>Từ nhà phát triển ChatGPT:</b> Tạo ra hình ảnh chân thực và nghệ thuật từ mô tả.<br>• <b>Chỉnh sửa thông minh:</b> Có thể thêm hoặc xóa các đối tượng, mở rộng hình ảnh gốc.<br>• <b>Kết hợp ý tưởng:</b> Tạo ra những hình ảnh hoàn toàn mới bằng cách kết hợp các khái niệm khác nhau." },
+            { id: "13", name: "Stable Diffusion", url: "https://stablediffusionweb.com/", description: "Mô hình tạo ảnh mã nguồn mở.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/stablediffusionweb.com", rating: 4.8, detailedDescription: "• <b>Mã nguồn mở:</b> Cho phép tùy chỉnh sâu và chạy trên máy tính cá nhân.<br>• <b>Linh hoạt và mạnh mẽ:</b> Có khả năng tạo ra nhiều phong cách hình ảnh khác nhau.<br>• <b>Cộng đồng lớn:</b> Rất nhiều mô hình được huấn luyện sẵn do cộng đồng chia sẻ." },
+            { id: "14", name: "Canva AI", url: "https://www.canva.com/ai-image-generator/", description: "Tạo ảnh ngay trong trình thiết kế Canva.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/canva.com", rating: 4.7, detailedDescription: "• <b>Tích hợp hoàn hảo:</b> Tạo ảnh AI trực tiếp trong khi thiết kế trên Canva.<br>• <b>Dễ sử dụng:</b> Giao diện trực quan, không yêu cầu kỹ năng phức tạp.<br>• <b>Magic Edit:</b> Chỉnh sửa, thay thế hoặc thêm các yếu tố vào ảnh bằng văn bản." },
+            { id: "15", name: "Leonardo.Ai", url: "https://leonardo.ai/", description: "Tạo tài sản game và hình ảnh chất lượng cao.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/leonardo.ai", rating: 4.8, detailedDescription: "• <b>Dành cho nhà phát triển game:</b> Tạo nhân vật, vật phẩm, môi trường game.<br>• <b>Huấn luyện mô hình riêng:</b> Tạo ra phong cách hình ảnh nhất quán cho dự án của bạn.<br>• <b>Nhiều mô hình có sẵn:</b> Lựa chọn từ các mô hình được tinh chỉnh cho các phong cách khác nhau." },
+            { id: "59", name: "Let's Enhance", url: "https://letsenhance.io/", description: "Nâng cao chất lượng và độ phân giải ảnh.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/letsenhance.io", rating: 4.6, detailedDescription: "• <b>Tăng độ phân giải:</b> Phóng to hình ảnh lên đến 16 lần mà không làm giảm chất lượng.<br>• <b>Khử nhiễu và làm nét:</b> Cải thiện chất lượng của các bức ảnh cũ hoặc bị mờ.<br>• <b>Chỉnh màu tự động:</b> Tự động cân bằng màu sắc và ánh sáng cho ảnh." },
+            { id: "62", name: "PhotoRoom", url: "https://www.photoroom.com/", description: "Xóa nền và chỉnh sửa ảnh sản phẩm.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/photoroom.com", rating: 4.7, detailedDescription: "• <b>Xóa nền tức thì:</b> Tự động xóa nền khỏi hình ảnh một cách chính xác.<br>• <b>Dành cho E-commerce:</b> Tạo ảnh sản phẩm chuyên nghiệp cho các trang bán hàng.<br>• <b>Nhiều mẫu có sẵn:</b> Cung cấp các mẫu nền và bố cục đẹp mắt." },
+            { id: "63", name: "Clipdrop", url: "https://clipdrop.co/", description: "Bộ công cụ chỉnh sửa hình ảnh bằng AI.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/clipdrop.co", rating: 4.6, detailedDescription: "• <b>Bộ công cụ đa năng:</b> Xóa nền, xóa vật thể, nâng cấp ảnh, tạo ảnh mới.<br>• <b>Relight:</b> Thay đổi ánh sáng trong ảnh của bạn một cách chuyên nghiệp.<br>• <b>Uncrop:</b> Mở rộng khung hình của bất kỳ bức ảnh nào." },
+            { id: "77", name: "Ideogram", url: "https://ideogram.ai/", description: "Tạo hình ảnh với văn bản đáng tin cậy.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/ideogram.ai", rating: 4.8, detailedDescription: "• <b>Chuyên gia về văn bản:</b> Là một trong những AI tốt nhất để tạo ra hình ảnh có chứa văn bản rõ ràng, chính xác.<br>• <b>Magic Prompt:</b> Tự động cải thiện và mở rộng câu lệnh của bạn để có kết quả tốt hơn.<br>• <b>Nhiều phong cách:</b> Hỗ trợ tạo typography, logo, poster và ảnh." },
+            { id: "87", name: "Krea", url: "https://www.krea.ai/", description: "Nâng cấp và tạo ảnh AI thời gian thực.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/krea.ai", rating: 4.8, detailedDescription: "• <b>Nâng cấp thời gian thực:</b> Biến các bản phác thảo đơn giản thành hình ảnh chi tiết ngay lập tức.<br>• <b>Tạo mẫu AI:</b> Huấn luyện AI theo phong cách của riêng bạn.<br>• <b>Giao diện sáng tạo:</b> Cung cấp một không gian làm việc trực quan để sáng tạo với AI." },
+            { id: "102", name: "Remove.bg", url: "https://www.remove.bg/", description: "Xóa nền ảnh tự động trong 5 giây.", category: "Hình ảnh", logoUrl: "https://logo.clearbit.com/remove.bg", rating: 4.8, detailedDescription: "• <b>Xóa nền chỉ trong 5 giây:</b> Tự động 100% và miễn phí.<br>• <b>Độ chính xác cao:</b> Xử lý các chi tiết khó như tóc một cách ấn tượng.<br>• <b>Tích hợp API:</b> Dễ dàng thêm tính năng xóa nền vào trang web hoặc ứng dụng của bạn." },
 
-            const tableBody = document.getElementById('table-body');
+            // Giọng nói
+            { id: "51", name: "Murf.ai", url: "https://murf.ai/", description: "Tạo giọng đọc AI chân thực từ văn bản.", category: "Giọng nói", logoUrl: "https://logo.clearbit.com/murf.ai", rating: 4.7, detailedDescription: "• <b>Giọng đọc như thật:</b> Cung cấp thư viện giọng đọc AI chất lượng cao cho video, podcast.<br>• <b>Tùy chỉnh linh hoạt:</b> Điều chỉnh cao độ, tốc độ và cảm xúc của giọng nói.<br>• <b>Nhân bản giọng nói:</b> Tạo ra phiên bản AI của chính giọng nói của bạn." },
+            { id: "52", name: "LALAL.AI", url: "https://www.lalal.ai/", description: "Tách giọng hát và nhạc cụ khỏi bài hát.", category: "Giọng nói", logoUrl: "https://logo.clearbit.com/lalal.ai", rating: 4.6, detailedDescription: "• <b>Tách âm thanh:</b> Dễ dàng tách vocal, trống, bass, piano khỏi bất kỳ file âm thanh nào.<br>• <b>Chất lượng cao:</b> Giữ lại chất lượng âm thanh gốc sau khi xử lý.<br>• <b>Dành cho nhà sản xuất âm nhạc:</b> Công cụ tuyệt vời để tạo beat, remix và karaoke." },
+            { id: "64", name: "ElevenLabs", url: "https://elevenlabs.io/", description: "Tạo giọng nói và nhân bản giọng nói AI.", category: "Giọng nói", logoUrl: "https://logo.clearbit.com/elevenlabs.io", rating: 4.9, detailedDescription: "• <b>Giọng nói biểu cảm nhất:</b> Nổi tiếng với khả năng tạo ra giọng nói tự nhiên và giàu cảm xúc.<br>• <b>Nhân bản giọng nói:</b> Tạo ra một bản sao kỹ thuật số của giọng nói của bạn chỉ từ vài phút âm thanh.<br>• <b>Tạo sách nói:</b> Công cụ mạnh mẽ để chuyển đổi văn bản dài thành sách nói." },
+            { id: "65", name: "Play.ht", url: "https://play.ht/", description: "Trình tạo giọng nói AI và chuyển văn bản thành giọng nói.", category: "Giọng nói", logoUrl: "https://logo.clearbit.com/play.ht", rating: 4.6, detailedDescription: "• <b>Thư viện giọng nói lớn:</b> Cung cấp hơn 900 giọng nói AI trong hơn 140 ngôn ngữ.<br>• <b>Tích hợp API:</b> Dễ dàng tích hợp khả năng chuyển văn bản thành giọng nói vào ứng dụng của bạn.<br>• <b>Podcast AI:</b> Tạo podcast tự động từ các nguồn cấp dữ liệu văn bản." },
+            { id: "66", name: "Resemble.ai", url: "https://www.resemble.ai/", description: "Bộ công cụ giọng nói AI hoàn chỉnh.", category: "Giọng nói", logoUrl: "https://logo.clearbit.com/resemble.ai", rating: 4.5, detailedDescription: "• <b>Nhân bản giọng nói:</b> Tạo giọng nói tùy chỉnh cho thương hiệu của bạn.<br>• <b>Chuyển đổi giọng nói:</b> Biến đổi giọng nói của bạn thành giọng của người khác.<br>• <b>Lồng tiếng địa phương:</b> Dễ dàng lồng tiếng cho nội dung của bạn sang các ngôn ngữ khác." },
+            { id: "75", name: "Adobe Podcast", url: "https://podcast.adobe.com/", description: "Nâng cao chất lượng âm thanh podcast bằng AI.", category: "Giọng nói", logoUrl: "https://logo.clearbit.com/adobe.com", rating: 4.8, detailedDescription: "• <b>Enhance Speech:</b> Loại bỏ tiếng ồn và tiếng vang, làm cho giọng nói nghe như được thu trong phòng thu.<br>• <b>Mic Check:</b> Phân tích thiết lập micro của bạn và đưa ra mẹo để cải thiện.<br>• <b>Chỉnh sửa dựa trên văn bản:</b> Chỉnh sửa âm thanh của bạn bằng cách chỉnh sửa bản ghi." },
+            { id: "76", name: "Suno AI", url: "https://suno.com/", description: "Tạo bài hát hoàn chỉnh từ một câu lệnh.", category: "Giọng nói", logoUrl: "https://logo.clearbit.com/suno.com", rating: 4.9, detailedDescription: "• <b>Sáng tác nhạc tức thì:</b> Chỉ cần mô tả thể loại và chủ đề, AI sẽ tạo ra bài hát có cả nhạc và lời.<br>• <b>Không cần kỹ năng âm nhạc:</b> Bất kỳ ai cũng có thể tạo ra những bài hát độc đáo.<br>• <b>Nhiều thể loại:</b> Hỗ trợ pop, rock, hip-hop, và nhiều thể loại khác." },
+            { id: "90", name: "AssemblyAI", url: "https://www.assemblyai.com/", description: "API chuyển giọng nói thành văn bản chính xác.", category: "Giọng nói", logoUrl: "https://logo.clearbit.com/assemblyai.com", rating: 4.7, detailedDescription: "• <b>Dành cho nhà phát triển:</b> Tích hợp khả năng nhận dạng giọng nói vào ứng dụng.<br>• <b>Độ chính xác cao:</b> Chuyển đổi âm thanh và video thành văn bản một cách tin cậy.<br>• <b>Nhiều tính năng:</b> Tóm tắt âm thanh, phát hiện chủ đề, kiểm duyệt nội dung." },
+            { id: "104", name: "Podcastle", url: "https://podcastle.ai/", description: "Phòng thu âm thanh và video tất cả trong một.", category: "Giọng nói", logoUrl: "https://logo.clearbit.com/podcastle.ai", rating: 4.8, detailedDescription: "• <b>Phòng thu podcast tất cả trong một:</b> Ghi âm, chỉnh sửa và xuất bản podcast.<br>• <b>Magic Dust:</b> Loại bỏ tiếng ồn và cải thiện chất lượng âm thanh bằng một cú nhấp chuột.<br>• <b>Ghi âm từ xa:</b> Mời khách mời và ghi âm với chất lượng phòng thu từ bất cứ đâu." },
+
+            // Tạo Video
+            { id: "21", name: "RunwayML", url: "https://runwayml.com", description: "Bộ công cụ chỉnh sửa video bằng AI.", category: "Tạo Video", logoUrl: "https://logo.clearbit.com/runwayml.com", rating: 4.8, detailedDescription: "• <b>Tạo video từ văn bản (Gen-2):</b> Biến ý tưởng của bạn thành các cảnh quay video.<br>• <b>Mở rộng vô hạn:</b> Mở rộng khung hình video của bạn theo bất kỳ hướng nào.<br>• <b>Công cụ ma thuật:</b> Cung cấp hơn 30 công cụ AI để biến đổi video của bạn." },
+            { id: "22", name: "Synthesia", url: "https://www.synthesia.io/", description: "Tạo video từ văn bản với avatar AI.", category: "Tạo Video", logoUrl: "https://logo.clearbit.com/synthesia.io", rating: 4.7, detailedDescription: "• <b>Tiết kiệm chi phí:</b> Tạo video chuyên nghiệp mà không cần diễn viên, máy quay.<br>• <b>Avatar AI đa dạng:</b> Lựa chọn từ hơn 140 người thuyết trình ảo.<br>• <b>Đa ngôn ngữ:</b> Tạo video với giọng nói bằng hơn 120 ngôn ngữ." },
+            { id: "24", name: "Pictory", url: "https://pictory.ai/", description: "Tạo video từ kịch bản hoặc bài viết.", category: "Tạo Video", logoUrl: "https://logo.clearbit.com/pictory.ai", rating: 4.6, detailedDescription: "• <b>Chuyển blog thành video:</b> Tự động tạo video từ URL bài viết của bạn.<br>• <b>Thư viện media khổng lồ:</b> Truy cập hàng triệu video clip và hình ảnh có bản quyền.<br>• <b>Thêm giọng đọc tự động:</b> Dễ dàng thêm giọng đọc AI hoặc ghi âm giọng của bạn." },
+            { id: "57", name: "Fliki", url: "https://fliki.ai/", description: "Tạo video từ văn bản với giọng đọc AI.", category: "Tạo Video", logoUrl: "https://logo.clearbit.com/fliki.ai", rating: 4.7, detailedDescription: "• <b>Chuyển ý tưởng thành video:</b> Tạo video từ văn bản, blog, tweet với giọng đọc AI.<br>• <b>Thư viện media phong phú:</b> Truy cập hàng triệu hình ảnh, video clip và nhạc nền.<br>• <b>Giọng đọc tự nhiên:</b> Cung cấp hơn 2000 giọng đọc trong 75 ngôn ngữ." },
+            { id: "67", name: "Pika", url: "https://pika.art/", description: "Nền tảng tạo video từ ý tưởng.", category: "Tạo Video", logoUrl: "https://logo.clearbit.com/pika.art", rating: 4.8, detailedDescription: "• <b>Tạo video từ văn bản & hình ảnh:</b> Biến mọi ý tưởng thành video một cách dễ dàng.<br>• <b>Nhiều phong cách:</b> Tạo video theo phong cách hoạt hình 3D, anime, điện ảnh.<br>• <b>Chỉnh sửa video:</b> Thay đổi nội dung, phong cách hoặc mở rộng khung hình video." },
+            { id: "83", name: "Synthesys", url: "https://synthesys.io/", description: "Tạo video và giọng nói AI chuyên nghiệp.", category: "Tạo Video", logoUrl: "https://logo.clearbit.com/synthesys.io", rating: 4.6, detailedDescription: "• <b>AI Video Generator:</b> Tạo video với người thuyết trình ảo (humatar).<br>• <b>AI Voice Generator:</b> Truy cập thư viện giọng nói chuyên nghiệp.<br>• <b>AI Image Generator:</b> Tạo hình ảnh độc đáo từ văn bản." },
+            { id: "84", name: "DeepBrain AI", url: "https://www.deepbrain.io/", description: "Tạo video với avatar AI siêu thực.", category: "Tạo Video", logoUrl: "https://logo.clearbit.com/deepbrain.io", rating: 4.7, detailedDescription: "• <b>Avatar siêu thực:</b> Tạo video với các avatar AI giống người thật.<br>• <b>Chuyển văn bản thành video:</b> Tạo video nhanh chóng chỉ từ kịch bản.<br>• <b>Avatar tùy chỉnh:</b> Tạo avatar AI của riêng bạn." },
+            
+            // Edit Video
+            { id: "23", name: "Descript", url: "https://www.descript.com/", description: "Chỉnh sửa video và podcast như tài liệu text.", category: "Edit Video", logoUrl: "https://logo.clearbit.com/descript.com", rating: 4.8, detailedDescription: "• <b>Chỉnh sửa đột phá:</b> Cắt video, xóa các từ lặp lại chỉ bằng cách chỉnh sửa văn bản.<br>• <b>Ghi màn hình & Podcast:</b> Công cụ tất cả trong một cho các nhà sáng tạo nội dung.<br>• <b>Studio Sound:</b> Loại bỏ tiếng ồn và cải thiện chất lượng âm thanh chỉ bằng một cú nhấp chuột." },
+            { id: "29", name: "VEED.IO", url: "https://www.veed.io/", description: "Chỉnh sửa video trực tuyến với công cụ AI.", category: "Edit Video", logoUrl: "https://logo.clearbit.com/veed.io", rating: 4.6, detailedDescription: "• <b>Trình chỉnh sửa mạnh mẽ:</b> Cung cấp đầy đủ các công cụ cắt, ghép, thêm hiệu ứng.<br>• <b>Phụ đề tự động:</b> Tự động tạo phụ đề cho video với độ chính xác cao.<br>• <b>Xóa nền video:</b> Dễ dàng xóa nền mà không cần phông xanh." },
+            { id: "30", name: "Opus Clip", url: "https://www.opus.pro/", description: "Biến video dài thành các clip viral ngắn.", category: "Edit Video", logoUrl: "https://logo.clearbit.com/opus.pro", rating: 4.7, detailedDescription: "• <b>Tái sử dụng nội dung:</b> Biến một video dài thành 10 clip ngắn có khả năng lan truyền.<br>• <b>AI Curation:</b> Tự động xác định những khoảnh khắc hấp dẫn nhất trong video.<br>• <b>Định dạng tự động:</b> Thêm phụ đề, định dạng lại khung hình cho các nền tảng khác nhau." },
+            { id: "68", name: "CapCut", url: "https://www.capcut.com/", description: "Trình chỉnh sửa video miễn phí, đa năng.", category: "Edit Video", logoUrl: "https://logo.clearbit.com/capcut.com", rating: 4.8, detailedDescription: "• <b>Dễ sử dụng:</b> Giao diện trực quan, phù hợp cho cả người mới bắt đầu.<br>• <b>Nhiều tính năng AI:</b> Phụ đề tự động, xóa nền, ổn định hình ảnh, hiệu ứng giọng nói.<br>• <b>Thư viện xu hướng:</b> Cung cấp các hiệu ứng, bộ lọc và âm thanh đang thịnh hành." },
+            { id: "74", name: "Vidyo.ai", url: "https://vidyo.ai/", description: "Tạo video ngắn từ nội dung dài bằng AI.", category: "Edit Video", logoUrl: "https://logo.clearbit.com/vidyo.ai", rating: 4.7, detailedDescription: "• <b>Tái sử dụng video:</b> Tự động biến podcast, hội thảo webinar thành các clip ngắn cho mạng xã hội.<br>• <b>Phụ đề và định dạng:</b> Tự động thêm phụ đề, logo và thay đổi kích thước video.<br>• <b>Tiết kiệm thời gian:</b> Giảm 90% thời gian và công sức chỉnh sửa video." },
+            
+            // Thuyết trình
+            { id: "42", name: "Tome", url: "https://tome.app/", description: "Tạo bài thuyết trình ấn tượng bằng AI.", category: "Thuyết trình", logoUrl: "https://logo.clearbit.com/tome.app", rating: 4.7, detailedDescription: "• <b>Tạo slide tự động:</b> Biến văn bản hoặc tài liệu của bạn thành một bài thuyết trình hoàn chỉnh.<br>• <b>Thiết kế thông minh:</b> Tự động chọn bố cục, hình ảnh và biểu tượng phù hợp.<br>• <b>Tương tác và hấp dẫn:</b> Dễ dàng nhúng các nội dung đa phương tiện khác." },
+            { id: "56", name: "Beautiful.ai", url: "https://www.beautiful.ai/", description: "Tạo bài thuyết trình đẹp mắt tự động.", category: "Thuyết trình", logoUrl: "https://logo.clearbit.com/beautiful.ai", rating: 4.6, detailedDescription: "• <b>Thiết kế thông minh:</b> AI tự động áp dụng các quy tắc thiết kế để slide luôn đẹp.<br>• <b>Mẫu slide đa dạng:</b> Cung cấp thư viện slide thông minh cho mọi loại nội dung.<br>• <b>Tiết kiệm thời gian:</b> Giúp bạn tập trung vào nội dung thay vì định dạng." },
+            { id: "69", name: "Gamma.app", url: "https://gamma.app/", description: "Một phương tiện mới để trình bày ý tưởng.", category: "Thuyết trình", logoUrl: "https://logo.clearbit.com/gamma.app", rating: 4.8, detailedDescription: "• <b>Thay thế slide:</b> Tạo các bản trình bày, tài liệu, trang web tương tác.<br>• <b>Tạo từ văn bản:</b> AI giúp bạn tạo bản nháp đầu tiên trong vài giây.<br>• <b>Tương tác cao:</b> Dễ dàng nhúng GIF, video, biểu đồ và trang web." },
+            { id: "70", name: "Pitch", url: "https://pitch.com/", description: "Nền tảng thuyết trình cho các đội nhóm.", category: "Thuyết trình", logoUrl: "https://logo.clearbit.com/pitch.com", rating: 4.7, detailedDescription: "• <b>Hợp tác hiệu quả:</b> Cùng nhau chỉnh sửa, bình luận và trình bày trong thời gian thực.<br>• <b>Mẫu chuyên nghiệp:</b> Bắt đầu nhanh chóng với các mẫu được thiết kế đẹp mắt.<br>• <b>Tích hợp AI:</b> Giúp bạn tạo slide, viết lại nội dung và tìm hình ảnh." },
+
+            // Marketing
+            { id: "31", name: "Surfer SEO", url: "https://surferseo.com/", description: "Tối ưu hóa nội dung để xếp hạng cao hơn.", category: "Marketing", logoUrl: "https://logo.clearbit.com/surferseo.com", rating: 4.8, detailedDescription: "• <b>Phân tích đối thủ:</b> Xem các trang top đầu đang làm gì để xếp hạng.<br>• <b>Hướng dẫn chi tiết:</b> Cung cấp gợi ý về từ khóa, độ dài, cấu trúc bài viết.<br>• <b>Tăng hạng bền vững:</b> Giúp bạn tạo ra nội dung mà Google yêu thích." },
+            { id: "32", name: "AdCreative.ai", url: "https://www.adcreative.ai/", description: "Tạo quảng cáo chuyển đổi cao.", category: "Marketing", logoUrl: "https://logo.clearbit.com/adcreative.ai", rating: 4.7, detailedDescription: "• <b>Tạo quảng cáo hàng loạt:</b> Tạo ra hàng trăm biến thể quảng cáo trong vài phút.<br>• <b>Tối ưu hóa chuyển đổi:</b> AI được huấn luyện để tạo ra các mẫu quảng cáo thu hút nhất.<br>• <b>Tích hợp dễ dàng:</b> Kết nối với các tài khoản quảng cáo Facebook, Google." },
+            { id: "55", name: "Looka", url: "https://looka.com/", description: "Thiết kế logo và bộ nhận diện thương hiệu.", category: "Marketing", logoUrl: "https://logo.clearbit.com/looka.com", rating: 4.6, detailedDescription: "• <b>Thiết kế logo bằng AI:</b> Tạo ra hàng trăm mẫu logo độc đáo chỉ từ tên và ngành nghề.<br>• <b>Bộ nhận diện thương hiệu:</b> Tự động tạo danh thiếp, mẫu mạng xã hội, và nhiều hơn nữa.<br>• <b>Dễ dàng tùy chỉnh:</b> Thay đổi màu sắc, phông chữ, và bố cục một cách trực quan." },
+            { id: "71", name: "Semrush", url: "https://www.semrush.com/", description: "Bộ công cụ marketing online toàn diện.", category: "Marketing", logoUrl: "https://logo.clearbit.com/semrush.com", rating: 4.8, detailedDescription: "• <b>Nghiên cứu từ khóa:</b> Tìm kiếm các từ khóa có giá trị để nhắm mục tiêu.<br>• <b>Phân tích đối thủ:</b> Xem chiến lược SEO và quảng cáo của đối thủ.<br>• <b>Theo dõi thứ hạng:</b> Giám sát vị trí của bạn trên các công cụ tìm kiếm." },
+            { id: "80", name: "Ahrefs", url: "https://ahrefs.com/", description: "Bộ công cụ SEO toàn diện cho chuyên gia.", category: "Marketing", logoUrl: "https://logo.clearbit.com/ahrefs.com", rating: 4.9, detailedDescription: "• <b>Phân tích backlink hàng đầu:</b> Sở hữu chỉ số backlink lớn và chính xác nhất.<br>• <b>Nghiên cứu từ khóa chuyên sâu:</b> Tìm kiếm cơ hội xếp hạng và phân tích độ khó.<br>• <b>Kiểm tra trang web:</b> Tự động quét và phát hiện các vấn đề kỹ thuật SEO." },
+            { id: "82", name: "Tidio", url: "https://www.tidio.com/", description: "Nền tảng giao tiếp khách hàng với chatbot AI.", category: "Marketing", logoUrl: "https://logo.clearbit.com/tidio.com", rating: 4.7, detailedDescription: "• <b>Live Chat & Chatbot:</b> Tương tác với khách truy cập web 24/7.<br>• <b>Lyro AI Chatbot:</b> Tự động trả lời đến 70% câu hỏi của khách hàng.<br>• <b>Tăng doanh số:</b> Chủ động tiếp cận khách hàng và đề xuất sản phẩm." },
+            { id: "89", name: "Gong", url: "https://www.gong.io/", description: "Nền tảng thông minh về doanh thu cho đội sale.", category: "Marketing", logoUrl: "https://logo.clearbit.com/gong.io", rating: 4.8, detailedDescription: "• <b>Phân tích cuộc gọi:</b> Ghi âm, ghi lại và phân tích các cuộc gọi bán hàng.<br>• <b>Hiểu rõ khách hàng:</b> AI xác định các chủ đề, câu hỏi và mối quan tâm của khách hàng.<br>• <b>Huấn luyện đội sale:</b> Cung cấp dữ liệu để cải thiện kỹ năng bán hàng." },
+            { id: "105", name: "VidIQ", url: "https://vidiq.com/", description: "Công cụ tối ưu hóa kênh YouTube.", category: "Marketing", logoUrl: "https://logo.clearbit.com/vidiq.com", rating: 4.7, detailedDescription: "• <b>Phân tích kênh YouTube:</b> Cung cấp số liệu chi tiết để bạn hiểu rõ hiệu suất kênh.<br>• <b>Nghiên cứu từ khóa:</b> Tìm các từ khóa tốt nhất để tăng lượt xem cho video của bạn.<br>• <b>Gợi ý ý tưởng hàng ngày:</b> AI đề xuất các ý tưởng video dựa trên xu hướng và kênh của bạn." },
+            
+            // Năng suất
+            { id: "41", name: "Notion AI", url: "https://www.notion.so/product/ai", description: "Trợ lý AI tích hợp trong Notion.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/notion.so", rating: 4.9, detailedDescription: "• <b>Trợ lý ngay trong ghi chú:</b> Tóm tắt, dịch, và cải thiện văn bản ngay lập tức.<br>• <b>Tự động hóa công việc:</b> Tạo bảng, lên danh sách công việc từ một yêu cầu đơn giản.<br>• <b>Brainstorm ý tưởng:</b> Giúp bạn suy nghĩ và triển khai các ý tưởng mới." },
+            { id: "43", name: "Fireflies.ai", url: "https://fireflies.ai/", description: "Ghi âm và tóm tắt cuộc họp tự động.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/fireflies.ai", rating: 4.7, detailedDescription: "• <b>Không bao giờ bỏ lỡ thông tin:</b> Tự động tham gia, ghi âm và ghi lại cuộc họp.<br>• <b>Tóm tắt thông minh:</b> Tạo ra các gạch đầu dòng về những điểm chính, hành động cần làm.<br>• <b>Tìm kiếm dễ dàng:</b> Tìm lại bất kỳ thông tin nào đã được thảo luận trong các cuộc họp." },
+            { id: "53", name: "GitHub Copilot", url: "https://github.com/features/copilot", description: "Trợ lý lập trình AI ngay trong trình soạn thảo.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/github.com", rating: 4.8, detailedDescription: "• <b>Gợi ý code thông minh:</b> Đề xuất các dòng code hoặc toàn bộ hàm ngay khi bạn gõ.<br>• <b>Tăng tốc độ lập trình:</b> Giúp bạn viết code nhanh hơn và giảm thiểu lỗi.<br>• <b>Học hỏi từ mã nguồn mở:</b> Được huấn luyện trên hàng tỷ dòng code công khai." },
+            { id: "54", name: "Replit", url: "https://replit.com/", description: "Môi trường lập trình trực tuyến với AI.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/replit.com", rating: 4.7, detailedDescription: "• <b>Lập trình mọi lúc mọi nơi:</b> Viết, chạy và chia sẻ code trực tiếp trên trình duyệt.<br>• <b>Ghostwriter AI:</b> Giúp hoàn thành code, giải thích và gỡ lỗi.<br>• <b>Hỗ trợ đa ngôn ngữ:</b> Hỗ trợ hơn 50 ngôn ngữ lập trình khác nhau." },
+            { id: "60", name: "Krisp", url: "https://krisp.ai/", description: "Loại bỏ tiếng ồn trong các cuộc gọi.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/krisp.ai", rating: 4.8, detailedDescription: "• <b>Âm thanh trong trẻo:</b> AI loại bỏ tiếng ồn nền từ cả hai phía của cuộc gọi.<br>• <b>Hoạt động với mọi ứng dụng:</b> Tương thích với Zoom, Google Meet, Teams, và nhiều hơn nữa.<br>• <b>Tăng sự chuyên nghiệp:</b> Giúp bạn có các cuộc họp trực tuyến chất lượng cao." },
+            { id: "73", name: "Perplexity AI", url: "https://www.perplexity.ai/", description: "Công cụ tìm kiếm dạng hội thoại có trích dẫn.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/perplexity.ai", rating: 4.9, detailedDescription: "• <b>Câu trả lời đáng tin cậy:</b> Cung cấp câu trả lời trực tiếp cho câu hỏi của bạn kèm theo nguồn trích dẫn.<br>• <b>Tìm kiếm chuyên sâu:</b> Chế độ 'Copilot' giúp bạn đào sâu vào các chủ đề phức tạp.<br>• <b>Tải lên tài liệu:</b> Hỏi đáp trực tiếp trên các tệp PDF hoặc văn bản của bạn." },
+            { id: "78", name: "Zapier", url: "https://zapier.com/", description: "Tự động hóa quy trình làm việc giữa các ứng dụng.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/zapier.com", rating: 4.9, detailedDescription: "• <b>Kết nối mọi thứ:</b> Liên kết hơn 5,000 ứng dụng web với nhau mà không cần code.<br>• <b>Tự động hóa tác vụ lặp lại:</b> Tiết kiệm thời gian bằng cách tạo các 'Zap' tự động.<br>• <b>Tích hợp AI:</b> Sử dụng AI để tóm tắt văn bản, phân loại email và nhiều hơn nữa trong các quy trình của bạn." },
+            { id: "79", name: "Bardeen", url: "https://www.bardeen.ai/", description: "Tự động hóa các tác vụ thủ công trên trình duyệt.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/bardeen.ai", rating: 4.7, detailedDescription: "• <b>Trợ lý AI trong trình duyệt:</b> Tự động hóa các công việc bạn làm hàng ngày trên web.<br>• <b>Thu thập dữ liệu:</b> Dễ dàng lấy dữ liệu từ các trang web và gửi đến Google Sheets, Notion.<br>• <b>Tích hợp mạnh mẽ:</b> Kết nối với các công cụ phổ biến như LinkedIn, Twitter, Google Drive." },
+            { id: "81", name: "ClickUp", url: "https://clickup.com/", description: "Nền tảng quản lý công việc tất cả trong một.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/clickup.com", rating: 4.8, detailedDescription: "• <b>Quản lý mọi thứ:</b> Từ công việc, tài liệu, chat, mục tiêu đến bảng trắng.<br>• <b>ClickUp AI:</b> Tóm tắt, tạo ý tưởng và viết nội dung ngay trong công việc của bạn.<br>• <b>Tùy chỉnh cao:</b> Điều chỉnh không gian làm việc cho phù hợp với mọi loại đội nhóm." },
+            { id: "88", name: "Scribe", url: "https://scribehow.com/", description: "Tự động tạo hướng dẫn quy trình từng bước.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/scribehow.com", rating: 4.8, detailedDescription: "• <b>Ghi lại quy trình:</b> Tự động ghi lại các bước bạn thực hiện trên màn hình.<br>• <b>Tạo hướng dẫn tức thì:</b> Xuất ra tài liệu hướng dẫn có ảnh chụp màn hình và văn bản.<br>• <b>Tiết kiệm thời gian đào tạo:</b> Dễ dàng chia sẻ kiến thức và quy trình cho đội nhóm." },
+            { id: "100", name: "Miro", url: "https://miro.com/", description: "Bảng trắng trực tuyến cho đội nhóm hợp tác.", category: "Năng suất", logoUrl: "https://logo.clearbit.com/miro.com", rating: 4.8, detailedDescription: "• <b>Bảng trắng kỹ thuật số:</b> Không gian vô hạn để brainstorm, lập sơ đồ và hợp tác.<br>• <b>Miro Assist (AI):</b> Tự động tạo sơ đồ tư duy, tóm tắt ghi chú và tạo ý tưởng.<br>• <b>Dành cho đội nhóm:</b> Công cụ hoàn hảo cho các buổi họp, workshop và quản lý dự án." }
+        ];
+
+        // --- RENDERING ---
+        function renderTools(toolsToRender) {
+            const toolGrid = document.getElementById('tool-grid');
+            toolGrid.innerHTML = ''; // Clear grid
+            if (toolsToRender.length === 0) {
+                toolGrid.innerHTML = `<p class="col-span-full text-center text-gray-400">Không tìm thấy công cụ nào.</p>`;
+                return;
+            }
+            toolsToRender.forEach(tool => {
+                const placeholderLogo = `https://placehold.co/40x40/374151/ffffff?text=${tool.name.charAt(0)}`;
+                const logoSrc = tool.logoUrl || placeholderLogo;
+
+                const toolCard = `
+                    <div class="bg-gray-800 rounded-lg p-5 flex flex-col border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div data-tool-id="${tool.id}" class="flex items-center mb-4 cursor-pointer tool-card-header">
+                            <img src="${logoSrc}" alt="Logo ${tool.name}" class="w-10 h-10 rounded-md mr-4 bg-gray-700 object-contain pointer-events-none" onerror="this.onerror=null;this.src='${placeholderLogo}';">
+                            <h3 class="font-bold text-lg text-white pointer-events-none">${tool.name}</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow mb-4">${tool.description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="bg-gray-700 text-blue-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">${tool.category}</span>
+                            <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-500 hover:text-blue-400">
+                                Truy cập &rarr;
+                            </a>
+                        </div>
+                    </div>
+                `;
+                toolGrid.innerHTML += toolCard;
+            });
+        }
+
+        // --- FILTERING ---
+        function applyFilters() {
             const searchInput = document.getElementById('search-input');
-            const applyFiltersBtn = document.getElementById('apply-filters-btn');
-            const clearFiltersBtn = document.getElementById('clear-filters-btn');
-            const categoryListContainer = document.getElementById('category-list');
-            const filterInputs = {
-                commission: document.getElementById('filter-commission'),
-                recurring: document.getElementById('filter-recurring'),
-                traffic: document.getElementById('filter-traffic'),
-                country: document.getElementById('filter-country')
-            };
+            const searchTerm = searchInput.value.toLowerCase();
+            let filtered = allTools;
 
-            function renderCategories() {
-                const categories = ['All', ...new Set(programsData.map(p => p.category))].sort();
-                categoryListContainer.innerHTML = '';
-                categories.forEach(cat => {
-                    const isActive = cat === 'All';
-                    const link = document.createElement('a');
-                    link.href = '#';
-                    link.dataset.category = cat;
-                    link.className = `category-link px-3 py-1 text-sm font-medium rounded-full ${isActive ? 'active text-white bg-gray-800' : 'text-gray-600 hover:bg-gray-200'}`;
-                    link.textContent = cat;
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const currentActive = categoryListContainer.querySelector('.active');
-                        if (currentActive) {
-                            currentActive.classList.remove('active', 'text-white', 'bg-gray-800');
-                            currentActive.classList.add('text-gray-600', 'hover:bg-gray-200');
-                        }
-                        link.classList.add('active', 'text-white', 'bg-gray-800');
-                        link.classList.remove('text-gray-600', 'hover:bg-gray-200');
-                        filterAndSearch();
-                    });
-                    categoryListContainer.appendChild(link);
-                });
+            if (currentFilter !== 'all') {
+                filtered = filtered.filter(tool => tool.category === currentFilter);
             }
 
-            function renderTable(programs) {
-                tableBody.innerHTML = '';
-                if (programs.length === 0) {
-                    tableBody.innerHTML = `<tr class="no-results-row"><td colspan="9">No matching programs found.</td></tr>`;
-                    return;
-                }
-                // Sắp xếp theo traffic giảm dần
-                programs.sort((a, b) => b.traffic - a.traffic);
-                
-                programs.forEach(p => {
-                    const placeholder = `https://placehold.co/40x40/E5E7EB/9CA3AF?text=${p.name.charAt(0)}`;
-                    const logoHtml = `<div class="flex-shrink-0 h-10 w-10"><img class="h-10 w-10 rounded-md object-contain" src="${p.logo}" alt="${p.name} logo" onerror="this.onerror=null;this.src='${placeholder}';"></div>`;
-                    const row = `<tr>
-                            <td class="px-6 py-4 whitespace-nowrap"><div class="flex items-center">${logoHtml}<div class="ml-4"><div class="text-sm font-medium text-gray-900">${p.name}</div><div class="text-sm text-gray-500">${p.category}</div></div></div></td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.epu}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.commission}%</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${(p.traffic / 1000000).toFixed(1)}M /mo</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.recurring}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.pricing}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.launchYear}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.country}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium"><a href="${p.link}" target="_blank" class="flex items-center justify-center gap-2 w-24 text-center px-3 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50"><i data-lucide="external-link" class="w-4 h-4"></i><span>Visit</span></a></td>
-                        </tr>`;
-                    tableBody.innerHTML += row;
-                });
-                lucide.createIcons();
+            if (searchTerm) {
+                filtered = filtered.filter(tool => 
+                    tool.name.toLowerCase().includes(searchTerm) ||
+                    tool.description.toLowerCase().includes(searchTerm)
+                );
             }
             
-            function filterAndSearch() {
-                const searchValue = searchInput.value.toLowerCase();
-                const activeCategory = categoryListContainer.querySelector('.active').dataset.category;
-                const filters = {
-                    commission: parseInt(filterInputs.commission.value) || 0,
-                    recurring: filterInputs.recurring.value,
-                    traffic: parseInt(filterInputs.traffic.value) || 0,
-                    country: filterInputs.country.value
-                };
+            renderTools(filtered);
+        }
 
-                const filteredPrograms = programsData.filter(p => {
-                    const searchMatch = p.name.toLowerCase().includes(searchValue) || p.category.toLowerCase().includes(searchValue);
-                    const categoryMatch = activeCategory === 'All' || p.category === activeCategory;
-                    const commissionMatch = p.commission >= filters.commission;
-                    const trafficMatch = p.traffic >= filters.traffic;
-                    const countryMatch = filters.country === 'Any' || p.country === filters.country;
-                    const recurringMatch = filters.recurring === 'Any' || p.recurring === filters.recurring;
+        // --- STAR RATING ---
+        function generateStars(rating) {
+            let starsHTML = '';
+            const fullStars = Math.floor(rating);
+            const halfStar = (rating % 1 >= 0.3 && rating % 1 < 0.8) ? 1 : 0;
+            const fullStarFromHalf = (rating % 1 >= 0.8) ? 1 : 0;
+            const totalFull = fullStars + fullStarFromHalf;
+            const emptyStars = 5 - totalFull - halfStar;
 
-                    return searchMatch && categoryMatch && commissionMatch && trafficMatch && countryMatch && recurringMatch;
-                });
-                renderTable(filteredPrograms);
+            for (let i = 0; i < totalFull; i++) {
+                starsHTML += `<svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>`;
             }
+            if (halfStar) {
+                starsHTML += `<svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0v15z"/></svg>`;
+            }
+            for (let i = 0; i < emptyStars; i++) {
+                starsHTML += `<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>`;
+            }
+            starsHTML += `<span class="ml-2 text-sm font-bold text-gray-300">${rating.toFixed(1)}/5.0</span>`;
+            return starsHTML;
+        }
 
-            applyFiltersBtn.addEventListener('click', filterAndSearch);
-            searchInput.addEventListener('keyup', filterAndSearch);
-            clearFiltersBtn.addEventListener('click', () => {
-                searchInput.value = '';
-                Object.values(filterInputs).forEach(input => input.selectedIndex = 0);
-                const allCategoryLink = categoryListContainer.querySelector('[data-category="All"]');
-                if (allCategoryLink) allCategoryLink.click();
-                filterAndSearch();
+        // --- TOOL DETAIL MODAL ---
+        function showToolDetail(toolId) {
+            const tool = allTools.find(t => t.id === toolId);
+            if (!tool) return;
+
+            const modal = document.getElementById('tool-detail-modal');
+            const placeholderLogo = `https://placehold.co/96x96/374151/ffffff?text=${tool.name.charAt(0)}`;
+
+            document.getElementById('detail-logo').src = tool.logoUrl || placeholderLogo;
+            document.getElementById('detail-logo').onerror = function() { this.src = placeholderLogo; };
+            document.getElementById('detail-name').textContent = tool.name;
+            document.getElementById('detail-category').textContent = tool.category;
+            document.getElementById('detail-visit-btn').href = tool.url;
+            document.getElementById('detail-description').innerHTML = tool.detailedDescription || tool.description;
+            document.getElementById('detail-rating').innerHTML = generateStars(tool.rating);
+            
+            modal.style.display = 'flex';
+        }
+
+        // --- INITIAL LOAD & EVENT LISTENERS ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all elements needed for event listeners
+            const categoryFilters = document.getElementById('category-filters');
+            const searchInput = document.getElementById('search-input');
+            const toolGrid = document.getElementById('tool-grid');
+            const detailModal = document.getElementById('tool-detail-modal');
+            const closeDetailModalBtn = document.getElementById('close-detail-modal-btn');
+
+            // Attach event listeners after DOM is loaded
+            categoryFilters.addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    document.querySelectorAll('.filter-btn').forEach(btn => {
+                        btn.classList.remove('bg-blue-600', 'text-white');
+                        btn.classList.add('bg-gray-700', 'text-gray-200');
+                    });
+                    e.target.classList.add('bg-blue-600', 'text-white');
+                    e.target.classList.remove('bg-gray-700', 'text-gray-200');
+                    
+                    currentFilter = e.target.dataset.category;
+                    applyFilters();
+                }
             });
 
-            // --- KHỞI TẠO BAN ĐẦU ---
-            renderCategories();
-            renderTable(programsData);
-            lucide.createIcons();
+            searchInput.addEventListener('input', applyFilters);
 
-            // --- LOGIC GIAO DIỆN PHỤ ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-            const container = document.getElementById('category-container');
-            const scrollLeftBtn = document.getElementById('scroll-left');
-            const scrollRightBtn = document.getElementById('scroll-right');
-            const checkScrollButtons = () => {
-                if (!container) return;
-                const maxScrollLeft = container.scrollWidth - container.clientWidth;
-                scrollLeftBtn.classList.toggle('opacity-0', container.scrollLeft <= 0);
-                scrollLeftBtn.classList.toggle('pointer-events-none', container.scrollLeft <= 0);
-                scrollRightBtn.classList.toggle('opacity-0', container.scrollLeft >= maxScrollLeft -1);
-                scrollRightBtn.classList.toggle('pointer-events-none', container.scrollLeft >= maxScrollLeft -1);
-            };
-            scrollLeftBtn.addEventListener('click', () => container.scrollBy({ left: -200, behavior: 'smooth' }));
-            scrollRightBtn.addEventListener('click', () => container.scrollBy({ left: 200, behavior: 'smooth' }));
-            container.addEventListener('scroll', checkScrollButtons);
-            window.addEventListener('resize', checkScrollButtons);
-            setTimeout(checkScrollButtons, 100);
+            // --- DETAIL MODAL CONTROLS ---
+            toolGrid.addEventListener('click', (e) => {
+                const header = e.target.closest('.tool-card-header');
+                if (header) {
+                    const toolId = header.dataset.toolId;
+                    showToolDetail(toolId);
+                }
+            });
+            closeDetailModalBtn.addEventListener('click', () => { detailModal.style.display = 'none'; });
+            detailModal.addEventListener('click', (e) => { if (e.target === detailModal) detailModal.style.display = 'none'; });
+
+            // Initial render
+            applyFilters();
         });
     </script>
 </body>
